@@ -1,0 +1,370 @@
+<accordion-group heading="Instrumentation and Conditions" class="instrumentation-conditions" [class.panel-open]="Opened"
+  [class.disabled]="InstrumentationConditionsDisabled" [isOpen]="InstrumentationConditionsOpened" [isDisabled]="InstrumentationConditionsDisabled"
+  [formGroup]="InstrumentationConditions">
+
+  <!-- EDIT FORM -->
+  <div class="edit" *ngIf="finish">
+    <ng-container *ngIf="location.indexOf('form-gc') !== -1">
+      <div class="form-group row">
+        <div class="col-md-3">
+          <label for="InjectionVolume">Inj. Volume
+            <span class="red">*</span>
+          </label>
+          <input type="number" step=".01" class="form-control" aria-describedby="InjectionVolume" formControlName="InjectionVolume">
+        </div>
+        <div class="col-md-3">
+          <label for="InjectionUnitKey">Inj. Unit
+            <span class="red">*</span>
+          </label>
+          <kendo-combobox class="form-control" [data]="dataInjUnit" textField="Value" valueField="Key" valuePrimitive="true" suggest="true"
+            [(ngModel)]="injUnitKey" formControlName="InjectionUnitKey" filterable="true" (filterChange)="filterChangeInjUnit($event)">
+          </kendo-combobox>
+        </div>
+        <div class="col-md-3">
+          <label for="InjectorTemp">Injector Temp. (&deg;C)</label>
+          <input type="number" step=".01" class="form-control" aria-describedby="InjectorTemp" formControlName="InjectorTemp">
+        </div>
+        <div class="col-md-3">
+          <label for="InjectionMode">Injection Mode
+            <span class="red">*</span>
+          </label>
+          <kendo-combobox class="form-control" [data]="dataInjectionMode" textField="Value" valueField="Key" valuePrimitive="true"
+            suggest="true" [(ngModel)]="injectionModeKey" formControlName="InjectionModeKey" filterable="true" (filterChange)="filterChangeInjectionMode($event)">
+          </kendo-combobox>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-3">
+          <label for="SplitRatio">Split Ratio (X:1)</label>
+          <input type="number" step=".01" class="form-control" id="splitRatio" aria-describedby="SplitRatio" formControlName="SplitRatio">
+        </div>
+        <div class="col-md-3">
+          <label for="SplitlessHoldTime">Splitless Hold Time (min)</label>
+          <input type="number" step=".01" class="form-control" id="splitlessHoldTime" aria-describedby="SplitlessHoldTime" formControlName="SplitlessHoldTime">
+        </div>
+        <div class="col-md-6">
+          <label for="AdditionalDetail">Additional Detail</label>
+          <input type="text" class="form-control" id="additionalDetail" aria-describedby="AdditionalDetail" formControlName="AdditionalDetail">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-3" *ngIf="location.indexOf('form-gc') !== -1">
+          <label for="FlowRateTechnique">Flow Rate Technique
+            <span class="red">*</span>
+          </label>
+          <kendo-combobox class="form-control" [data]="dataFlowRateTechnique" textField="Value" valueField="Key" valuePrimitive="true"
+            suggest="true" [(ngModel)]="flowRateTechniqueKey" formControlName="FlowRateTechniqueKey" filterable="true" (filterChange)="filterChangeFlowRateTechnique($event)">
+          </kendo-combobox>
+        </div>
+        <div class="col-md-3" *ngIf="location.indexOf('form-gc') !== -1">
+          <label for="FlowRate">Flow Rate
+            <span class="red">*</span>
+          </label>
+          <input type="number" step=".01" class="form-control" aria-describedby="FlowRate" formControlName="FlowRate">
+        </div>
+        <div class="col-md-3" *ngIf="location.indexOf('form-gc') !== -1">
+          <label for="FlowRateUnitKey">Flow Rate Unit
+            <span class="red">*</span>
+          </label>
+          <kendo-combobox class="form-control" [data]="dataFlowRateUnit" textField="Value" valueField="Key" valuePrimitive="true" suggest="true"
+            [(ngModel)]="flowRateUnitKey" formControlName="FlowRateUnitKey" filterable="true" (filterChange)="filterChangeFlowRateUnit($event)">
+          </kendo-combobox>
+        </div>
+        <div class="col-md-3">
+          <label for="CarrierGas">Carrier Gas
+            <span class="red">*</span>
+          </label>
+          <kendo-combobox class="form-control" [data]="dataCarrierGas" textField="Value" valueField="Key" valuePrimitive="true" suggest="true"
+            [(ngModel)]="carrierGasKey" formControlName="CarrierGasKey" filterable="true" (filterChange)="filterChangeCarrierGas($event)">
+          </kendo-combobox>
+        </div>
+
+      </div>
+      <div class="form-group row">
+        <div class="col-md-4">
+          <label for="GCSystem">GC System
+            <span class="red">*</span>
+          </label>
+          <kendo-combobox class="form-control" [data]="dataGCSystem" textField="Value" valueField="Key" valuePrimitive="true" suggest="true"
+            [(ngModel)]="gcSystemKey" formControlName="GCSystemKey" filterable="true" (filterChange)="filterChangeGCSystem($event)">
+          </kendo-combobox>
+        </div>
+        <div class="col-md-4">
+          <label for="DetectorType">Detector Type
+            <span class="red">*</span>
+          </label>
+          <kendo-combobox class="form-control" [data]="dataDetectorType" textField="Value" valueField="Key" suggest="true" valuePrimitive="true"
+            [(ngModel)]="detectorTypeKey" aria-describedby="DetectorTypeKey" formControlName="DetectorTypeKey" filterable="true"
+            (filterChange)="filterChangeDetectorType($event)">
+          </kendo-combobox>
+        </div>
+        <div class="col-md-4">
+          <label for="DetectorInstrumentation">Detector Instrumentation
+            <span class="red">*</span>
+          </label>
+          <kendo-combobox class="form-control" [data]="dataDetectorInstrumentation" textField="Value" valueField="Key" suggest="true"
+            valuePrimitive="true" [(ngModel)]="detectorInstrumentationKey" aria-describedby="DetectorInstrumentation" formControlName="DetectorInstrumentationKey"
+            filterable="true" (filterChange)="filterChangeDetectorInstrumentation($event)">
+          </kendo-combobox>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-2">
+          <label for="DetectorTemp">Detector Temp. (&deg;C)</label>
+          <input type="number" step=".01" class="form-control" aria-describedby="DetectorTemp" formControlName="DetectorTemp">
+        </div>
+        <div class="col-md-3">
+          <label for="DetectorDetail1">Detector Detail #1</label>
+          <input type="number" step=".01" class="form-control" aria-describedby="DetectorDetail1" formControlName="DetectorDetail1">
+        </div>
+        <div class="col-md-2">
+          <label for="1Unit">#1 Unit</label>
+          <kendo-combobox class="form-control" [data]="dataOneUnit" textField="Value" valueField="Key" suggest="true" valuePrimitive="true"
+            [(ngModel)]="oneUnitKey" formControlName="Unit1Key" filterable="true" (filterChange)="filterChangeOneUnit($event)">
+          </kendo-combobox>
+        </div>
+        <div class="col-md-3">
+          <label for="DetectorDetail2">Detector Detail #2</label>
+          <input type="number" step=".01" class="form-control" aria-describedby="DetectorDetail2" formControlName="DetectorDetail2">
+        </div>
+        <div class="col-md-2">
+          <label for="2Unit">#2 Unit</label>
+          <kendo-combobox class="form-control" [data]="dataTwoUnit" textField="Value" valueField="Key" valuePrimitive="true" suggest="true"
+            [(ngModel)]="twoUnitKey" formControlName="Unit2Key" filterable="true" (filterChange)="filterChangeTwoUnit($event)">
+          </kendo-combobox>
+        </div>
+      </div>
+      <div class="row">
+        <div class="scroll">
+          <!-- GC GRID -->
+          <table class="table table-hover gc">
+            <thead>
+              <tr>
+                <td>Step
+                  <span class="red">*</span>
+                </td>
+                <td>Temp Rate (°C)
+                  <span class="red">*</span>
+                </td>                
+                <td>Oven Temperature (°C)
+                  <span class="red">*</span>
+                </td>
+                <td>Hold Time (min)
+                  <span class="red">*</span>
+                </td>
+                <td *ngIf="disabled != true"></td>
+              </tr>
+            </thead>
+            <tbody formArrayName="StepGC">
+              <tr *ngIf="0">
+                <td colspan="8">Please Add a Step.</td>
+              </tr>
+              <tr *ngFor="let x of InstrumentationConditions.controls.StepGC.controls; let i=index" [formGroupName]="i">
+                <td>{{i + 1}}</td>
+                <td>
+                  <input type="number" step=".01" class="form-control" aria-describedby="TempRate" formControlName="TempRate">
+                </td>                
+                <td>
+                  <input type="number" step=".01" class="form-control" aria-describedby="TempC" formControlName="TempC">
+                </td>
+                <td>
+                  <input type="number" step=".01" class="form-control" aria-describedby="FlowTime" formControlName="FlowTime">
+                </td>
+                <td *ngIf="disabled != true">
+                  <span class="fa fa-times-circle pull-right" *ngIf="InstrumentationConditions.controls.StepGC.controls.length > 1" (click)="removeStep(i)"></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="location.indexOf('form-lc') !== -1">
+      <div class="row form-group">
+        <div class="col-md-3">
+          <label for="InjectionVolume">Inj. Volume
+            <span class="red">*</span>
+          </label>
+          <input type="number" step=".01" class="form-control" aria-describedby="InjectionVolume" formControlName="InjectionVolume">
+        </div>
+        <div class="col-md-3">
+          <label for="InjectionUnitKey">Inj. Unit
+            <span class="red">*</span>
+          </label>
+          <kendo-combobox class="form-control" [data]="dataInjUnit" textField="Value" valueField="Key" valuePrimitive="true" suggest="true"
+            [(ngModel)]="injUnitKey" formControlName="InjectionUnitKey" filterable="true" (filterChange)="filterChangeInjUnit($event)">
+          </kendo-combobox>
+        </div>
+        <div class="col-md-2">
+          <label for="InjectorTemp">Injector Temp. (&deg;C)</label>
+          <input type="number" step=".01" class="form-control" aria-describedby="InjectorTemp" formControlName="InjectorTemp">
+        </div>
+        <div class="col-md-2">
+          <label for="ColumnTemp">Column Temp. (&deg;C)
+            <span class="red">*</span>
+          </label>
+          <input type="number" step=".01" class="form-control" id="applicationId1" aria-describedby="ColumnTemp" formControlName="ColumnTemp">
+        </div>
+        <div class="col-md-2">
+          <label for="DetectorTemp">Detector Temp. (&deg;C)</label>
+          <input type="number" step=".01" class="form-control" aria-describedby="DetectorTemp" formControlName="DetectorTemp">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-3">
+          <label for="LCSystem">LC System
+            <span class="red">*</span>
+          </label>
+          <kendo-combobox class="form-control" [data]="dataLCSystem" textField="Value" valueField="Key" suggest="true" valuePrimitive="true"
+            [(ngModel)]="lcSystemKey" formControlName="LCSystemKey" filterable="true" (filterChange)="filterChangeLCSystem($event)">
+          </kendo-combobox>
+        </div>
+        <div class="col-md-3">
+          <label for="DetectorType">Detector Type
+            <span class="red">*</span>
+          </label>
+          <kendo-combobox class="form-control" [data]="dataDetectorType" textField="Value" valueField="Key" suggest="true" valuePrimitive="true"
+            [(ngModel)]="detectorTypeKey" aria-describedby="DetectorTypeKey" formControlName="DetectorTypeKey" filterable="true"
+            (filterChange)="filterChangeDetectorType($event)">
+          </kendo-combobox>
+        </div>
+        <div class="col-md-4">
+          <label for="DetectorInstrumentation">Detector Instrumentation
+            <span class="red">*</span>
+          </label>
+          <kendo-combobox class="form-control" [data]="dataDetectorInstrumentation" textField="Value" valueField="Key" suggest="true"
+            valuePrimitive="true" [(ngModel)]="detectorInstrumentationKey" aria-describedby="DetectorInstrumentation" formControlName="DetectorInstrumentationKey"
+            filterable="true" (filterChange)="filterChangeDetectorInstrumentation($event)">
+          </kendo-combobox>
+        </div>
+        <div class="col-md-2">
+          <label for="InjectionMode">Backpressure (bar)
+            <span class="red">*</span>
+          </label>
+          <input type="number" step=".01" class="form-control" id="backpressure" aria-describedby="Backpressure" formControlName="Backpressure">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-3">
+          <label for="Wavelength1">Wavelength #1</label>
+          <input type="number" step=".01" class="form-control" id="Wavelength1" aria-describedby="Wavelength1" formControlName="Wavelength1">
+        </div>
+        <div class="col-md-2">
+          <label for="1Unit">#1 Unit</label>
+          <kendo-combobox class="form-control" [data]="dataOneUnit" textField="Value" valueField="Key" suggest="true" valuePrimitive="true"
+            [(ngModel)]="oneUnitKey" formControlName="Unit1Key" filterable="true" (filterChange)="filterChangeOneUnit($event)">
+          </kendo-combobox>
+        </div>
+        <div class="col-md-3">
+          <label for="FlowRate">Wavelength #2</label>
+          <input type="number" step=".01" class="form-control" id="Wavelength2" aria-describedby="Wavelength2" formControlName="Wavelength2">
+        </div>
+        <div class="col-md-2">
+          <label for="2Unit">#2 Unit</label>
+          <kendo-combobox class="form-control" [data]="dataTwoUnit" textField="Value" valueField="Key" valuePrimitive="true" suggest="true"
+            [(ngModel)]="twoUnitKey" formControlName="Unit2Key" filterable="true" (filterChange)="filterChangeTwoUnit($event)">
+          </kendo-combobox>
+        </div>
+        <div class="col-md-2">
+          <label for="InjectionMode">Ionization Type</label>
+          <kendo-combobox class="form-control" [data]="dataIonizationType" textField="Value" valueField="Key" valuePrimitive="true"
+            suggest="true" [(ngModel)]="ionizationTypeKey" formControlName="IonizationTypeKey" filterable="true" (filterChange)="filterChangeIonizationType($event)">
+          </kendo-combobox>
+        </div>
+      </div>
+      <div class="row">
+        <div class="scroll">
+          <!-- LC GRID -->
+           <table class="table table-hover lc">
+            <thead>
+              <tr>
+                <td width="65">Step
+                  <span class="red">*</span>
+                </td>
+                <td width="110">Time (min)
+                  <span class="red">*</span>
+                </td>
+                <td width="100">Flow Rate
+                  <span class="red">*</span>
+                </td>
+                <td width="130">Unit
+                  <span class="red">*</span>
+                </td>
+                <td width="300">Eluent A
+                  <span class="red">*</span>
+                </td>
+                <td width="95">%A
+                  <span class="red">*</span>
+                </td>
+                <td width="300">Eluent B</td>
+                <td width="95">%B</td>
+                <td width="300">Eluent C</td>
+                <td width="95">%C</td>
+                <td width="300">Eluent D</td>
+                <td width="95">%D</td>
+                <td *ngIf="disabled != true"></td>
+              </tr>
+            </thead>
+            <tbody formArrayName="StepLC">
+              <tr *ngIf="0">
+                <td colspan="12">Please Add a Step.</td>
+              </tr>
+              <tr *ngFor="let x of InstrumentationConditions.controls.StepLC.controls; let c=index" [formGroupName]="c">
+                <td>{{c + 1}}</td>
+                <td>
+                  <input type="number" step=".01" class="form-control" aria-describedby="TimeM" formControlName="TimeM">
+                </td>
+                <td>
+                  <input type="number" step=".01" class="form-control" aria-describedby="FlowRateG" formControlName="FlowRateG">
+                </td>
+                <td>
+                  <kendo-combobox class="form-control" [data]="dataStepFlowRateUnit" textField="Value" valueField="Key" valuePrimitive="true"
+                    suggest="true" formControlName="FlowRateUnitKey">
+                  </kendo-combobox>
+                </td>
+                <td>
+                  <input type="string" class="form-control" aria-describedby="EluentA" formControlName="EluentA">
+                </td>
+                <td>
+                  <input type="number" step=".01" class="form-control" aria-describedby="EluentAP" formControlName="EluentAP">
+                </td>
+                <td>
+                  <input type="string" class="form-control" aria-describedby="EluentB" formControlName="EluentB">
+                </td>
+                <td>
+                  <input type="number" step=".01" class="form-control" aria-describedby="EluentBP" formControlName="EluentBP">
+                </td>
+                <td>
+                  <input type="string" class="form-control" aria-describedby="EluentC" formControlName="EluentC">
+                </td>
+                <td>
+                  <input type="number" step=".01" class="form-control" aria-describedby="EluentCP" formControlName="EluentCP">
+                </td>
+                <td>
+                  <input type="string" class="form-control" aria-describedby="EluentD" formControlName="EluentD">
+                </td>
+                <td>
+                  <input type="number" step=".01" class="form-control" aria-describedby="EluentDP" formControlName="EluentDP">
+                </td>
+                <td *ngIf="disabled != true">
+                  <span class="fa fa-times-circle pull-right" *ngIf="InstrumentationConditions.controls.StepLC.controls.length > 1" (click)="removeStep(c)"></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </ng-container>
+
+    <div class="form-group row">
+      <div class="col-md-2">
+        <button kendoButton (click)="addStep()" class="btn btn-full" [disabled]="disabled">Add New Step</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="done" *ngIf="!finish">
+    <img class="spinner" src="./assets/svg/loader.svg"/>
+  </div>
+</accordion-group>

@@ -1,0 +1,30 @@
+[
+  {
+    "Key": 1,
+    "Value": "Analyst Draft"
+  },
+  {
+    "Key": 2,
+    "Value": "Analyst Review"
+  },
+  {
+    "Key": 3,
+    "Value": "Marketing Draft"
+  },
+  {
+    "Key": 4,
+    "Value": "Chromatogram Upload"
+  },
+  {
+    "Key": 5,
+    "Value": "Ready for Web Approval"
+  },
+  {
+    "Key": 6,
+    "Value": "On PHE.com"
+  },
+  {
+    "Key": 7,
+    "Value": "Analyst Draft"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "Key": 8,
+    "Value": "GC/ECD",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 9,
+    "Value": "GC/FID",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 10,
+    "Value": "GC/MS",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 11,
+    "Value": "GC/MS/MS",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 12,
+    "Value": "GC/NPD",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 13,
+    "Value": "GC/TCD",
+    "ApplicationTypeKey": 2
+  }
+]

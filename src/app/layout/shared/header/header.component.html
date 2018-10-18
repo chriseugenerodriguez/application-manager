@@ -1,0 +1,21 @@
+<header class="main">
+	<div class="container">
+			<h1><a [routerLink]="['/']">App Chief 2018</a></h1>
+
+			<phx-nav></phx-nav>
+
+			<aside>
+				<!-- <a class="notification glyphicon glyphicon-bell"></a> -->
+				<div *ngIf="name" class="btn-group" dropdown>
+					<button class="btn dropdown-toggle dropdown-toggle-split" dropdownToggle>{{ name }} <span class="caret"></span><span class="sr-only">Split button!</span></button>
+						<ul *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu">
+							<li role="menuitem" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" [routerLink]="['/user/settings']">Settings</a></li>
+							<li *ngIf="admin == true" role="menuitem" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" [routerLink]="['/user/roles']">Roles</a></li>
+							<li *ngIf="admin == true" role="menuitem" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" [routerLink]="['/user/users']">Users</a></li>
+							<li class="divider"></li>
+							<li role="menuitem"><a class="dropdown-item" (click)="logOut()">Sign Out</a></li>
+						</ul>
+					</div>
+			</aside>
+	</div>
+</header>

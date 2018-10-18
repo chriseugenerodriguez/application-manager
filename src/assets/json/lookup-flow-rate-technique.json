@@ -1,0 +1,18 @@
+[
+  {
+    "Key": 1,
+    "Value": "Constant Flow"
+  },
+  {
+    "Key": 2,
+    "Value": "Constant Pressure"
+  },
+  {
+    "Key": 3,
+    "Value": "Ramp Flow"
+  },
+  {
+    "Key": 4,
+    "Value": "Ramp Pressure"
+  }
+]

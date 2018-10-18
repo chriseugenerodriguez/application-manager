@@ -1,0 +1,61 @@
+{
+    "InjectionVolume": "vol str",
+    "InjectionUnitKey": 4,
+    "InjectorTemp": "injecgtor temp str",
+    "ColumnTemp": "columnt temp str",
+    "DetectorTemp": "detector temp str",
+    "LCSystemKey": 1,
+    "GCSystemKey": 2,
+    "DetectorTypeKey": 2,
+    "DetectorInstrumentationKey": 2,
+    "Wavelength1": "wave 1 str",
+    "Wavelength2": "wave 2 str",
+    "IonizationTypeKey": 3,
+    "Backpressure": "back pressure str",
+    "SplitRatioKey": 2,
+    "SplitnessHoldTimeKey": 4,
+    "DetectorDetail1": "detail one",
+    "Unit1Key": 1,
+    "DetectorDetail2": "detail two",
+    "Unit2Key": 1,
+    "FlowRateUnitKey": 1,
+    "FlowRateTechniqueKey": 1,
+    "InjectionModeKey": 1,
+    "CarrierGasKey": 1,
+    "StepLC": [
+        {
+            "FlowRateG": "123",
+			"FlowRateUnitKey": 2,
+			"EluentA": "258",
+			"EluentAP": "369",
+			"EluentB": "789",
+			"EluentBP": "456",
+			"EluentC": "123",
+			"EluentCP": "147",
+			"EluentD": "369",
+			"EluentDP": "654"
+        },
+        {
+            "FlowRateG": "258",
+			"FlowRateUnitKey": 1,
+			"EluentA": "154",
+			"EluentAP": "965",
+			"EluentB": "12789",
+			"EluentBP": "34456",
+			"EluentC": "5456",
+			"EluentCP": "1676847",
+			"EluentD": "55",
+			"EluentDP": "7869"
+        }
+    ],
+    "StepGC": [
+        {
+            "FlowType": 2,
+			"TempC": "148",
+			"FlowTime": "01:22",
+			"TempStart": "01:00",
+			"TempEnd": "03:30",
+            "TempRate": "6.5"
+        }
+    ]
+}

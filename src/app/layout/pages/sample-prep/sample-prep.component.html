@@ -1,0 +1,50 @@
+
+  <section class="sample-prep-viewer">
+    <header class="row">
+      <div class="col-md-1">
+        <button type="button" class="btn btn-primary" [routerLink]="['create']">New SP</button>
+      </div>
+      <div class="right" style="margin-right: 15px;">
+        <button type="button" class="btn" (click)="clearFilter()" [disabled]="disabledButtonClear">Clear Filter</button>
+      </div>
+    </header>
+
+    <div class="row">
+      <div class="col-md-12">
+        <kendo-grid 
+          [data]="gridData" 
+          [pageSize]="state.take"
+          [skip]="state.skip"
+          [sort]="state.sort"
+          [filter]="state.filter"
+          [sortable]="true"
+          [pageable]="true"
+          filterable="menu"
+          (dataStateChange)="dataStateChange($event)"
+          (filterChange)="filterChange()"
+          [groupable]= "false"
+        >
+          <kendo-grid-column field="samplePrepID" title="ID">
+            <ng-template kendoGridCellTemplate let-dataItem>
+              <a [routerLink]="['/sample-preps/create/', dataItem.samplePrepID ]">{{ dataItem.samplePrepID }}</a>
+            </ng-template>
+          </kendo-grid-column>
+          <kendo-grid-column field="samplePrepTitle" title="Title"></kendo-grid-column>
+          <kendo-grid-column field="partNumber" title="Part #"></kendo-grid-column>
+          <kendo-grid-column field="partDescription1" title="Description"></kendo-grid-column>
+          <kendo-grid-column field="activated" title="Activated"></kendo-grid-column>
+          <kendo-grid-column field="createdBy" title="Created By"></kendo-grid-column>
+          <kendo-grid-column field="createdOn" title="Created On" filter="date">
+            <ng-template kendoGridCellTemplate let-dataItem>
+              {{ formatDate(dataItem.createdOn) | date:"shortDate" }}
+            </ng-template>
+          </kendo-grid-column>
+          <kendo-grid-column field="modifiedOn" title="Modified On" filter="date">
+            <ng-template kendoGridCellTemplate let-dataItem>
+              {{ formatDate(dataItem.modifiedOn) | date:"shortDate" }}
+            </ng-template>
+          </kendo-grid-column>
+        </kendo-grid>
+      </div>
+    </div>
+  </section>

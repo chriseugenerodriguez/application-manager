@@ -1,0 +1,33 @@
+<accordion-group heading="Sample Prep Method" class="sample-preperation-methodology" [class.panel-open]="Opened" [class.disabled]="SamplePreparationDisabled"
+  [isDisabled]="SamplePreparationDisabled" [isOpen]="SamplePreparationOpened" [formGroup]="SamplePrepMethod">
+
+  <!-- EDIT MODE -->
+  <div class="edit" *ngIf="finish">
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label for="SearchExistingSamplePrep">Search Existing Sample Preps</label>
+        <kendo-combobox class="form-control" [data]="dataSamplePreps" textField="samplePrepTitle" valueField="samplePrepID" valuePrimitive="true"
+          suggest="true" filterable="true" (filterChange)="handleFilter($event)" aria-describedby="SearchExistingSamplePrep"
+          formControlName="ID" [(ngModel)]="samplePrepMethodKey">
+          <ng-template kendoComboBoxItemTemplate let-dataItem>
+            <div class="kendo-item">
+              <span>{{ dataItem.samplePrepTitle }}</span>
+              <span>{{ dataItem.partNumber }}</span>
+              <span>{{ dataItem.partDescription1 }}</span>
+            </div>
+          </ng-template>
+        </kendo-combobox>
+      </div>
+      <div class="col-md-3 col-md-offset-3 align-right">
+        <button class="btn btn-primary" (click)="createSamplePrep()" [disabled]="disabled || save" style="width: 150px">
+          <span *ngIf="!save">New Sample Prep</span>
+          <i *ngIf="save" class="fa fa-spinner fa-spin"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="done" *ngIf="!finish">
+    <img class="spinner" src="./assets/svg/loader.svg" />
+  </div>
+</accordion-group>

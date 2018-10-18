@@ -1,0 +1,170 @@
+<phx-status></phx-status>
+
+<form [formGroup]="ApplicationForm">
+
+  <div class="clearfix content">
+    <div class="col col-md-9 col-lg-10">
+      <alert *ngIf="error" type="danger" dismissible='true'>{{error}}</alert>
+
+      <div class="clearfix">
+        <h1 *ngIf="location.indexOf('form-gc') !== -1">GC Application Form</h1>
+        <h1 *ngIf="location.indexOf('form-lc') !== -1">LC Application Form</h1>
+
+        <button *ngIf="delete && statusComponent.PHE !== true" type="delete" class="btn delete" [ngClass]="{'confirm': deleteConfirm, 'done': deleteDone }"
+          (click)="deleteApp()" [disabled]="!done || deleteDone">
+          <div class='icon'>
+            <i class='fa' [ngClass]="{'fa-trash-o': !deleteConfirm && !deleteDone, 'fa-question': deleteConfirm, 'fa-spinner fa-spin': deleteDone }"></i>
+          </div>
+          <div class='text' *ngIf="!deleteConfirm">
+            <span>Delete</span>
+          </div>
+          <div class='text' *ngIf="deleteConfirm">
+            <span>Confirm</span>
+          </div>
+        </button>
+        <input type="button" class="btn clone" *ngIf="permissions && cloneButton == true" (click)="cloneApplication()"
+          value="Clone" [disabled]="!done" />
+      </div>
+
+      <header *ngIf="applicationID != 0">
+        <h4 class="appid">App ID: {{ applicationID }}</h4>
+        <a *ngIf="permissions" (click)="toggleTabs()">Expand/Close</a>
+      </header>
+
+      <section class="application-details">
+
+        <accordion>
+          <phx-overview (done)="finishLoading($event)" [Opened]="isOpen" [form]="ApplicationForm.controls['Overview']"
+            [statusComponent]="statusComponent"></phx-overview>
+          <phx-column-details (done)="finishLoading($event)" [Opened]="isOpen" [form]="ApplicationForm.controls['ColumnDetails']"
+            [statusComponent]="statusComponent"></phx-column-details>
+          <phx-instrumentation-conditions (done)="finishLoading($event)" [Opened]="isOpen" [form]="ApplicationForm.controls['InstrumentationConditions']"
+            [statusComponent]="statusComponent"></phx-instrumentation-conditions>
+          <phx-analyte-details (done)="finishLoading($event)" [Opened]="isOpen" [form]="ApplicationForm.controls['AnalyteDetails']"
+            [statusComponent]="statusComponent"></phx-analyte-details>
+          <phx-sample-preparation-methodology (done)="finishLoading($event)" [Opened]="isOpen" [form]="ApplicationForm.controls['SamplePrepMethod']"
+            [statusComponent]="statusComponent" [applicationForm]="ApplicationForm"></phx-sample-preparation-methodology>
+          <phx-document-terms (done)="finishLoading($event)" [Opened]="isOpen" [form]="ApplicationForm.controls['DocumentsOfficialMethod']"
+            [statusComponent]="statusComponent"></phx-document-terms>
+          <phx-coding-related-terms (done)="finishLoading($event)" [Opened]="isOpen" [form]="ApplicationForm.controls['CodingRelatedTerms']"
+            [statusComponent]="statusComponent"></phx-coding-related-terms>
+          <phx-chromatograms (done)="finishLoading($event)" [Opened]="isOpen" [form]="ApplicationForm"
+            [statusComponent]="statusComponent"></phx-chromatograms>
+        </accordion>
+
+        <section class="save-submit col-md-12" *ngIf="permissions != null">
+          <button *ngIf="statusComponent.PHE === true" class="btn" (click)="onSave()" [disabled]="!ApplicationForm.dirty || !done || !admin">
+            <span *ngIf="!save">Update</span>
+            <i *ngIf="save" class="fa fa-spinner fa-spin"></i>
+          </button>
+          <button *ngIf="applicationID != '0' && statusComponent.PHE !== true" class="btn" (click)="onSave()"
+            [disabled]="!ApplicationForm.dirty || !done">
+            <span *ngIf="!save">Save</span>
+            <i *ngIf="save" class="fa fa-spinner fa-spin"></i>
+          </button>
+          <button *ngIf="applicationID == '0'" class="btn btn-primary" (click)="onSave()" [disabled]="!ApplicationForm.controls['Overview'].valid">
+            <span *ngIf="!save">Create</span>
+            <i *ngIf="save" class="fa fa-spinner fa-spin"></i>
+          </button>
+        </section>
+
+      </section>
+    </div>
+
+    <aside class="col col-xs-12 col-md-3 col-lg-2">
+      <div *ngIf="applicationID != 0">
+        <section [ngClass]="{permissions: permissions == 0}">
+          <div *ngIf="statusComponent.PHE === true && archive === true">
+            <button *ngIf="hideWeb" class="btn btn-primary" (click)="hideApp()" [disabled]="archiveSpinner">
+              <span *ngIf="!archiveSpinner">Hide on Web</span>
+              <i *ngIf="archiveSpinner" class="fa fa-spinner fa-spin"></i>
+            </button>
+            <button *ngIf="showWeb" class="btn btn-primary" (click)="showApp()" [disabled]="archiveSpinner">
+              <span *ngIf="!archiveSpinner">Show on Web</span>
+              <i *ngIf="archiveSpinner" class="fa fa-spinner fa-spin"></i>
+            </button>
+          </div>
+
+          <div *ngIf="statusComponent.PHE !== true && publish !== true && approve !== true">
+            <button type="delete" class="btn" (click)="rejectApp()" [disabled]="reject || !done">
+              <span *ngIf="!reject">Reject</span>
+              <i *ngIf="reject" class="fa fa-spinner fa-spin"></i>
+            </button>
+            <button type="approve" class="btn btn-primary" (click)="approveApp()" [disabled]="approved || !done">
+              <span *ngIf="!approved">Approve</span>
+              <i *ngIf="approved" class="fa fa-spinner fa-spin"></i>
+            </button>
+          </div>
+
+          <div *ngIf="statusComponent.WebApproval === true">
+            <div *ngIf="publishPermission; then truepublish; else falsepublish"></div>
+            <ng-template #truepublish>
+              <button type="delete" class="btn" (click)="rejectApp()" [disabled]="reject || !done">
+                <span *ngIf="!reject">Reject</span>
+                <i *ngIf="reject" class="fa fa-spinner fa-spin"></i>
+              </button>
+              <button type="publish" class="btn btn-primary" (click)="onSubmit()" [disabled]="approved || !done">
+                <span *ngIf="!approved">Publish</span>
+                <i *ngIf="approved" class="fa fa-spinner fa-spin"></i>
+              </button>
+            </ng-template>
+            <ng-template #falsepublish>
+              <div class="error nomargin">
+                No Publish Permission
+              </div>
+            </ng-template>
+          </div>
+
+          <div *ngIf="send && permissions">
+            <button *ngIf="statusComponent.AnalystDraft == true" type="send" class="btn btn-primary" [disabled]="!ApplicationForm.controls['Overview'].valid || !ApplicationForm.controls['ColumnDetails'].valid || !ApplicationForm.controls['InstrumentationConditions'].valid || !ApplicationForm.controls['AnalyteDetails'].valid || !ApplicationForm.controls['SamplePrepMethod'].valid || statusComponent.SendButton != true || save || !done"
+              (click)="onSubmit()">
+              <span *ngIf="!save">Send</span>
+              <i *ngIf="save" class="fa fa-spinner fa-spin"></i>
+            </button>
+            <button *ngIf="statusComponent.MarketingDraft == true" type="send" class="btn btn-primary" [disabled]="!ApplicationForm.controls['DocumentsOfficialMethod'].valid || !ApplicationForm.controls['CodingRelatedTerms'].valid || statusComponent.SendButton != true || save || !done"
+              (click)="onSubmit()">
+              <span *ngIf="!save">Send</span>
+              <i *ngIf="save" class="fa fa-spinner fa-spin"></i>
+            </button>
+            <button *ngIf="statusComponent.ChromatogramUpload == true" type="send" class="btn btn-primary" [disabled]="!ApplicationForm.controls['Chromatogram'].valid || save || !done"
+              (click)="onSubmit()">
+              <span *ngIf="!save">Send</span>
+              <i *ngIf="save" class="fa fa-spinner fa-spin"></i>
+            </button>
+          </div>
+        </section>
+        <section *ngIf="approve && permissions">
+          <kendo-combobox class="form-control" [data]="roleAssignList" (valueChange)="selectAssignTo($event)" formControlName="ReviewerEmail"></kendo-combobox>
+        </section>
+        <div class="error" *ngIf="!permissions">
+          No Role Assigned
+        </div>
+      </div>
+      <section class="status">
+        <label>Status</label>
+        <span>{{ statusValue }}</span>
+      </section>
+      <div *ngIf="applicationID != 0">
+        <section class="created">
+          <label>Created On</label>
+          <span>{{ createdOn }}</span>
+        </section>
+        <section>
+          <label>Created By</label>
+          <span>{{ createdBy }}</span>
+        </section>
+        <div *ngIf="modifiedBy">
+          <section>
+            <label>Modified On</label>
+            <span>{{ modifiedOn }}</span>
+          </section>
+          <section>
+            <label>Modified By</label>
+            <span>{{ modifiedBy }}</span>
+          </section>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+</form>

@@ -1,0 +1,142 @@
+[
+  {
+    "Key": 180,
+    "Value": "8000 Series",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 181,
+    "Value": "AC Analytical Controls Simdis",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 182,
+    "Value": "Agilent Intuvo 9000 GC System",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 183,
+    "Value": "GC System (Unknown)",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 184,
+    "Value": "Grace GC System",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 185,
+    "Value": "HP 5850",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 186,
+    "Value": "HP 5880",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 187,
+    "Value": "HP 5890",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 188,
+    "Value": "HP 5890/5970",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 189,
+    "Value": "HP 5890/5971",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 190,
+    "Value": "HP 5890/5972",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 191,
+    "Value": "HP 6850",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 192,
+    "Value": "HP 6890",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 193,
+    "Value": "HP 6890/5973",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 194,
+    "Value": "HP 6890/5975",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 195,
+    "Value": "HP 6890/6890",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 196,
+    "Value": "HP 7890",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 197,
+    "Value": "HP 7890/5975",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 198,
+    "Value": "HP GC System (Unknown)",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 199,
+    "Value": "HP GC/MS System (Unknown)",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 200,
+    "Value": "Perkin Elmer Autosystem GC",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 201,
+    "Value": "Perkin Elmer GC/MS System",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 202,
+    "Value": "Shimadzu GC System",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 203,
+    "Value": "Shimadzu GC/MS System",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 204,
+    "Value": "Thermo Fisher GC/MS System",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 205,
+    "Value": "Unknown",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 206,
+    "Value": "Varian GC System",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 207,
+    "Value": "Varian GC/MS System",
+    "ApplicationTypeKey": 2
+  }
+]

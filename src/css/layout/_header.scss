@@ -1,0 +1,181 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+//  BEM - Block Element Modifier
+//  This is how our code is structured. Please follow this layout and format.
+//  More Info: https://css-tricks.com/bem-101/
+//
+//  .steps {
+//	    &__item {		
+//		    &--first {}
+//		    &--last {}
+//		    &--active {}
+//		    &--done {}
+//	    }
+//	    &__link {}
+//  }
+
+header {
+
+	&.main {
+		color: rgba(255, 255, 255, 0.75);
+		background-color: #333;
+
+		h1 {
+			margin: 0px;
+			font-size: 18px;
+			float: left;
+
+			a {
+				height: 40px;
+				display: block;
+				padding: 10px 25px;
+				background: #f50;
+				background: linear-gradient(#f70, #f30);
+				color: #fff;
+
+				&:hover,
+				&:focus {
+					text-decoration: none;
+				}
+			}
+		}
+
+		phx-nav {
+			float: left;
+
+			nav {
+				li {
+					list-style: none;
+					float: left;
+
+					a {
+						height: 40px;
+						color: #ccc;
+						padding: 12px 20px;
+						border-right: 1px solid #111;
+						text-decoration: none;
+						display: block;
+						text-align: center;
+
+						&:hover,
+						&:active,
+						&:visited {
+							text-decoration: none;
+						}
+
+						&:hover {
+							color: #fff;
+						}
+					}
+
+					&.active {
+
+						a {
+							background: #111;
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+
+		aside {
+			float: right;
+			padding-top: 3px;
+
+			.notification {
+				margin-right: 15px;
+				display: inline-block;
+				vertical-align: middle;
+				color: #fff;
+				font-size: 14px;
+
+				&:hover,
+				&:focus {
+					text-decoration: none;
+				}
+			}
+
+			button {
+				background: transparent;
+				border: none;
+				padding: 0px;
+				color: #fff;
+
+				img {
+					@include border-radius(3px);
+					margin-right: 1px;
+					line-height: 1;
+					vertical-align: middle;
+					width: 20px;
+				}
+
+				span {
+					margin-left: 5px !important;
+				}
+
+				&:hover,
+				&:focus {
+					@include box-shadow(none);
+					background: transparent;
+					outline: 0px;
+					color: #fff;
+				}
+			}
+
+			.dropdown-menu {
+				right: 10px;
+				margin-top: 18px;
+				min-width: 140px;
+				background: #fff;
+
+				.divider {
+					margin: 0px;
+				}
+
+				&::before {
+					top: -16px;
+					right: 9px;
+					left: auto;
+					border: 8px solid transparent;
+					border-bottom-color: rgba(27, 31, 35, 0.15);
+				}
+
+				&::after {
+					top: -14px;
+					right: 10px;
+					left: auto;
+					border: 7px solid transparent;
+					border-bottom-color: #fff;
+				}
+
+				&::before,
+				&::after {
+					position: absolute;
+					display: inline-block;
+					content: "";
+				}
+
+				li {
+
+					a {
+						border: none;
+						padding: 4px 10px 4px 15px;
+						overflow: hidden;
+						color: #24292e;
+					}
+
+					&.active {
+
+						a {
+							background: #f50;
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+}

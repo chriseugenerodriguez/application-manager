@@ -1,0 +1,51 @@
+<accordion-group heading="Documents and Official Method" class="documents-terms" [class.panel-open]="Opened" [class.disabled]="DocumentTermsDisabled"
+  [isDisabled]="DocumentTermsDisabled" [isOpen]="DocumentTermsOpened" [formGroup]="DocumentsOfficialMethod">
+
+  <div class="edit" *ngIf="finish">
+    <div class="form-group row">
+      <div class="col-md-5">
+        <div class="form-group">
+          <label for="UploadDocument">Upload Document</label>
+          <kendo-upload #file="kendoUpload" [saveUrl]="uploadSaveUrl" formControlName="UploadDocument" [withCredentials]="false" (upload)="uploadEvent($event)"
+            [(ngModel)]="uploadFiles" [removeUrl]="removeUploadFile">
+            <ng-template kendoUploadFileTemplate let-files let-state="state">
+              <div *ngIf="format(state) == false" class="upload">
+                Wrong file type, please try again.
+              </div>
+              <div *ngIf="format(state)" class="upload">
+                <a (click)="download(files[0])">{{files[0].name}} </a>
+                <i (click)="removeUploadFile(file, files[0].uid)" class="fa fa-times-circle-o"></i>
+              </div>
+            </ng-template>
+          </kendo-upload>
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="form-group">
+              <label for="OfficalAgency">Official Agency</label>
+              <kendo-combobox class="form-control" [data]="dataOfficialAgency" textField="Value" valueField="Key" valuePrimitive="true"
+                [(ngModel)]="officialAgencyKey" suggest="true" formControlName="OfficialAgencyKey" filterable="true" (filterChange)="filterOfficialAgency($event)"
+                (valueChange)="OfficalAgencyChange($event)">
+              </kendo-combobox>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="form-group">
+              <label for="OfficialMethodNumber">Official Method Number</label>
+              <kendo-combobox class="form-control" [data]="dataOfficialMethodNumber" textField="Value" valueField="Key" valuePrimitive="true"
+                [(ngModel)]="officialMethodNumberKey" suggest="true" formControlName="OfficialMethodNumberKey" filterable="true"
+                (filterChange)="filterOfficialMethodNumber($event)">
+              </kendo-combobox>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="done" *ngIf="!finish">
+    <img class="spinner" src="./assets/svg/loader.svg"/>
+  </div>
+</accordion-group>

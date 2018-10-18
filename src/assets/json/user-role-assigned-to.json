@@ -1,0 +1,186 @@
+
+Curl
+curl -X GET --header 'Accept: application/json' 'http://phx-appmanager-api-dev.azurewebsites.net/phenomenex/appManager/1.0.0/users/3d0a5e38-beaf-4cf7-b42f-1ff8bf23390c'
+Request URL
+http://phx-appmanager-api-dev.azurewebsites.net/phenomenex/appManager/1.0.0/users/3d0a5e38-beaf-4cf7-b42f-1ff8bf23390c
+Response Body
+{
+  "Id": "3d0a5e38-beaf-4cf7-b42f-1ff8bf23390c",
+  "FirstName": null,
+  "LastName": null,
+  "Email": "chrisr@phenomenex.com",
+  "Roles": [
+    {
+      "Id": 3,
+      "Name": "RoleName100",
+      "Overview": {
+        "Read": true,
+        "Write": false
+      },
+      "ColumnDetails": {
+        "Read": true,
+        "Write": false
+      },
+      "InstrumentationConditions": {
+        "Read": true,
+        "Write": true
+      },
+      "AnalyteDetails": {
+        "Read": true,
+        "Write": true
+      },
+      "SamplePrepMethod": {
+        "Read": true,
+        "Write": true
+      },
+      "Chromatograms": {
+        "Read": true,
+        "Write": true
+      },
+      "DocumentsRelatedTerms": {
+        "Read": true,
+        "Write": true
+      },
+      "CodingRelatedTerms": {
+        "Read": true,
+        "Write": true
+      },
+      "Publish": true,
+      "Reviewer": {
+        "ID": "3c903930-7a36-47fd-8880-e7216a208fb3",
+        "Email": "DarrylTest@hotmail.com"
+      }
+    },
+    {
+      "Id": 4,
+      "Name": "RoleName200",
+      "Overview": {
+        "Read": false,
+        "Write": true
+      },
+      "ColumnDetails": {
+        "Read": false,
+        "Write": true
+      },
+      "InstrumentationConditions": {
+        "Read": false,
+        "Write": true
+      },
+      "AnalyteDetails": {
+        "Read": true,
+        "Write": true
+      },
+      "SamplePrepMethod": {
+        "Read": true,
+        "Write": true
+      },
+      "Chromatograms": {
+        "Read": true,
+        "Write": true
+      },
+      "DocumentsRelatedTerms": {
+        "Read": true,
+        "Write": true
+      },
+      "CodingRelatedTerms": {
+        "Read": true,
+        "Write": true
+      },
+      "Publish": true,
+      "Reviewer": {
+        "ID": "3d0a5e38-beaf-4cf7-b42f-1ff8bf23390c",
+        "Email": "chrisr@phenomenex.com"
+      }
+    },
+    {
+      "Id": 4,
+      "Name": "RoleName200",
+      "Overview": {
+        "Read": false,
+        "Write": true
+      },
+      "ColumnDetails": {
+        "Read": false,
+        "Write": true
+      },
+      "InstrumentationConditions": {
+        "Read": false,
+        "Write": true
+      },
+      "AnalyteDetails": {
+        "Read": true,
+        "Write": true
+      },
+      "SamplePrepMethod": {
+        "Read": true,
+        "Write": true
+      },
+      "Chromatograms": {
+        "Read": true,
+        "Write": true
+      },
+      "DocumentsRelatedTerms": {
+        "Read": true,
+        "Write": true
+      },
+      "CodingRelatedTerms": {
+        "Read": true,
+        "Write": true
+      },
+      "Publish": true,
+      "Reviewer": {
+        "ID": "3d0a5e38-beaf-4cf7-b42f-1ff8bf23390c",
+        "Email": "chrisr@phenomenex.com"
+      }
+    },
+    {
+      "Id": 3,
+      "Name": "RoleName100",
+      "Overview": {
+        "Read": true,
+        "Write": false
+      },
+      "ColumnDetails": {
+        "Read": true,
+        "Write": false
+      },
+      "InstrumentationConditions": {
+        "Read": true,
+        "Write": true
+      },
+      "AnalyteDetails": {
+        "Read": true,
+        "Write": true
+      },
+      "SamplePrepMethod": {
+        "Read": true,
+        "Write": true
+      },
+      "Chromatograms": {
+        "Read": true,
+        "Write": true
+      },
+      "DocumentsRelatedTerms": {
+        "Read": true,
+        "Write": true
+      },
+      "CodingRelatedTerms": {
+        "Read": true,
+        "Write": true
+      },
+      "Publish": true,
+      "Reviewer": {
+        "ID": "3c903930-7a36-47fd-8880-e7216a208fb3",
+        "Email": "DarrylTest@hotmail.com"
+      }
+    }
+  ],
+  "Settings": {
+    "ApplicationStatusKey": 3,
+    "ApplicationTypeKey": null,
+    "Reviewer": {
+      "ID": null,
+      "Email": null
+    }
+  }
+}

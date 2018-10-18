@@ -1,0 +1,434 @@
+[
+  {
+    "Key": 1,
+    "Value": "Agilent Technologies"
+  },
+  {
+    "Key": 2,
+    "Value": "Thermo Fisher Scientific"
+  },
+  {
+    "Key": 3,
+    "Value": "Waters"
+  },
+  {
+    "Key": 4,
+    "Value": "Dionex"
+  },
+  {
+    "Key": 5,
+    "Value": "Shimadzu"
+  },
+  {
+    "Key": 6,
+    "Value": "Sciex"
+  },
+  {
+    "Key": 7,
+    "Value": "1200 Series high performance autosampler, 0.1 100 µL"
+  },
+  {
+    "Key": 8,
+    "Value": "1200 Series micro well-plate autosampler"
+  },
+  {
+    "Key": 9,
+    "Value": "1200 Series standard autosampler, 0.1 100 µL"
+  },
+  {
+    "Key": 10,
+    "Value": "6850 Automatic Liquid Sampler"
+  },
+  {
+    "Key": 11,
+    "Value": "717 WISP 96-Position Tray"
+  },
+  {
+    "Key": 12,
+    "Value": "AB Sciex MPX - 2 Channel"
+  },
+  {
+    "Key": 13,
+    "Value": "AB Sciex MPX - 4 Channel"
+  },
+  {
+    "Key": 14,
+    "Value": "Agilent Intuvo 9000 GC System"
+  },
+  {
+    "Key": 15,
+    "Value": "Agilent Technologies 1090 HPLC System"
+  },
+  {
+    "Key": 16,
+    "Value": "Agilent Technologies 1100 Series"
+  },
+  {
+    "Key": 17,
+    "Value": "Agilent Technologies 1200 Series"
+  },
+  {
+    "Key": 18,
+    "Value": "Agilent Technologies 1200 Series Binary LC System"
+  },
+  {
+    "Key": 19,
+    "Value": "Agilent Technologies 1200 Series Capillary LC System"
+  },
+  {
+    "Key": 20,
+    "Value": "Agilent Technologies 1200 Series GPC-SEC Analysis System"
+  },
+  {
+    "Key": 21,
+    "Value": "Agilent Technologies 1200 Series Isocratic LC System"
+  },
+  {
+    "Key": 22,
+    "Value": "Agilent Technologies 1200 Series LC Micro Collection/Spotting System"
+  },
+  {
+    "Key": 23,
+    "Value": "Agilent Technologies 1200 Series Nanoflow LC System for MS"
+  },
+  {
+    "Key": 24,
+    "Value": "Agilent Technologies 1200 Series Purification System"
+  },
+  {
+    "Key": 25,
+    "Value": "Agilent Technologies 1200 Series Quaternary LC System"
+  },
+  {
+    "Key": 26,
+    "Value": "Agilent Technologies 1200 Series Rapid Resolution LC System"
+  },
+  {
+    "Key": 27,
+    "Value": "Agilent Technologies 1260 Infinity"
+  },
+  {
+    "Key": 28,
+    "Value": "Agilent Technologies 1260 Infinity Hybrid SFC/UHPLC"
+  },
+  {
+    "Key": 29,
+    "Value": "Agilent Technologies 1290 Infinity"
+  },
+  {
+    "Key": 30,
+    "Value": "Agilent Technologies LC/MS System"
+  },
+  {
+    "Key": 31,
+    "Value": "Agilent Technologies Polaris"
+  },
+  {
+    "Key": 32,
+    "Value": "AI 3000 Series Autosampler"
+  },
+  {
+    "Key": 33,
+    "Value": "Alliance 2690"
+  },
+  {
+    "Key": 34,
+    "Value": "Applied Biosystems 130 PTH Analyzer"
+  },
+  {
+    "Key": 35,
+    "Value": "Applied Biosystems 2000, 3000, 4000, 5000,  Mass Analyzer:  QQQ, Interface(s): ES/APCI, PI"
+  },
+  {
+    "Key": 36,
+    "Value": "Applied Biosystems BIOiTRAQ QS,  Mass Analyzer:  Q-TOF, Interface(s): ES/ APCI, NS, PI, AP_MALDI"
+  },
+  {
+    "Key": 37,
+    "Value": "Applied Biosystems LC/MS Model: API 3000,  Mass Analyzer:  QQQ, Interface(s): ES/APCI, PI"
+  },
+  {
+    "Key": 38,
+    "Value": "Applied Biosystems LC/MS Model: API 4000,  Mass Analyzer:  QQQ, Interface(s): ES/APCI, PI"
+  },
+  {
+    "Key": 39,
+    "Value": "Applied Biosystems LC/MS Model: API 5000,  Mass Analyzer:  QQQ, Interface(s): ES/APCI, PI"
+  },
+  {
+    "Key": 40,
+    "Value": "Applied Biosystems LC/MS System"
+  },
+  {
+    "Key": 41,
+    "Value": "Applied Biosystems Q TRAP,  Mass Analyzer:  QQQ-LT, Interface(s): ES/APCI, PI"
+  },
+  {
+    "Key": 42,
+    "Value": "Applied Biosystems Tempo ht LC"
+  },
+  {
+    "Key": 43,
+    "Value": "Dionex Autotrace"
+  },
+  {
+    "Key": 44,
+    "Value": "Dionex HPLC System"
+  },
+  {
+    "Key": 45,
+    "Value": "Dionex Summit HPLC System"
+  },
+  {
+    "Key": 46,
+    "Value": "Dionex UltiMate 3000"
+  },
+  {
+    "Key": 47,
+    "Value": "Dionex Ultimate 3000 RSLC"
+  },
+  {
+    "Key": 48,
+    "Value": "EMD 1000,  Mass Analyzer: Q, Interface(s): ES, APCI"
+  },
+  {
+    "Key": 49,
+    "Value": "GC System (Unknown)"
+  },
+  {
+    "Key": 50,
+    "Value": "HP 5850"
+  },
+  {
+    "Key": 51,
+    "Value": "HP 5880"
+  },
+  {
+    "Key": 52,
+    "Value": "HP 5890"
+  },
+  {
+    "Key": 53,
+    "Value": "HP 5890/5970"
+  },
+  {
+    "Key": 54,
+    "Value": "HP 5890/5971"
+  },
+  {
+    "Key": 55,
+    "Value": "HP 5890/5972"
+  },
+  {
+    "Key": 56,
+    "Value": "HP 6850"
+  },
+  {
+    "Key": 57,
+    "Value": "HP 6890"
+  },
+  {
+    "Key": 58,
+    "Value": "HP 6890/5973"
+  },
+  {
+    "Key": 59,
+    "Value": "HP 6890/5975"
+  },
+  {
+    "Key": 60,
+    "Value": "HP 6890/6890"
+  },
+  {
+    "Key": 61,
+    "Value": "HP 7890"
+  },
+  {
+    "Key": 62,
+    "Value": "HP 7890/5975"
+  },
+  {
+    "Key": 63,
+    "Value": "HP GC System (Unknown)"
+  },
+  {
+    "Key": 64,
+    "Value": "HP GC/MS System (Unknown)"
+  },
+  {
+    "Key": 65,
+    "Value": "HyperSep Positive Pressure Manifold"
+  },
+  {
+    "Key": 66,
+    "Value": "LCT Series,  Mass Analyzer: TOF, Interface(s): ES, APCI, ES/APCI"
+  },
+  {
+    "Key": 67,
+    "Value": "Liquid Handler"
+  },
+  {
+    "Key": 68,
+    "Value": "Positive Pressure-96"
+  },
+  {
+    "Key": 69,
+    "Value": "Q-Tof Series,  Mass Analyzer: Q-TOF, Interface(s): ES, APCI, ES/APCI, PI"
+  },
+  {
+    "Key": 70,
+    "Value": "Quatro Series,  Mass Analyzer: QQQ, Interface(s): ES, APCI, ES/APCI, PI"
+  },
+  {
+    "Key": 71,
+    "Value": "Shimadzu GC System"
+  },
+  {
+    "Key": 72,
+    "Value": "Shimadzu GC/MS System"
+  },
+  {
+    "Key": 73,
+    "Value": "Shimadzu HPLC System"
+  },
+  {
+    "Key": 74,
+    "Value": "Shimadzu LC/MS System"
+  },
+  {
+    "Key": 75,
+    "Value": "Shimadzu LC-10 Avp Series"
+  },
+  {
+    "Key": 76,
+    "Value": "Shimadzu LC-2010"
+  },
+  {
+    "Key": 77,
+    "Value": "Shimadzu LC-20A Prominence"
+  },
+  {
+    "Key": 78,
+    "Value": "Shimadzu LCMS-2010EV Evolution"
+  },
+  {
+    "Key": 79,
+    "Value": "Shimadzu LCMS-IT-TOF,  Mass Analyzer:  IT-TOF, Interface(s): ES"
+  },
+  {
+    "Key": 80,
+    "Value": "Shimadzu Nexera UHPLC"
+  },
+  {
+    "Key": 81,
+    "Value": "Shimadzu Prominence UFLC"
+  },
+  {
+    "Key": 82,
+    "Value": "Shimadzu SIL-6B, -7A,-8A,-9A, -10A"
+  },
+  {
+    "Key": 83,
+    "Value": "Shimadzu UFLC-XR"
+  },
+  {
+    "Key": 84,
+    "Value": "Thermo Fisher Accela High Speed HPLC"
+  },
+  {
+    "Key": 85,
+    "Value": "Thermo Fisher Accela High Speed HPLC / UPLC"
+  },
+  {
+    "Key": 86,
+    "Value": "Thermo Fisher Aria TLX HPLC System"
+  },
+  {
+    "Key": 87,
+    "Value": "Thermo Fisher Chromatography AS 3000 Series Autosampler"
+  },
+  {
+    "Key": 88,
+    "Value": "Thermo Fisher GC/MS System"
+  },
+  {
+    "Key": 89,
+    "Value": "Thermo Fisher HPLC System"
+  },
+  {
+    "Key": 90,
+    "Value": "Thermo Fisher LC/MS System"
+  },
+  {
+    "Key": 91,
+    "Value": "Thermo Fisher Surveyor Plus HPLC System"
+  },
+  {
+    "Key": 92,
+    "Value": "TSQ Quantum Accss,  Mass Analyzer:  QQQ, Interface(s): ES, IS, APCI"
+  },
+  {
+    "Key": 93,
+    "Value": "TSQ Quantum Series,  Mass Analyzer:  QQQ, Interface(s): ES, IS, APCI"
+  },
+  {
+    "Key": 94,
+    "Value": "Waters Acquity UPC2"
+  },
+  {
+    "Key": 95,
+    "Value": "Waters ACQUITY UPLC H-Class"
+  },
+  {
+    "Key": 96,
+    "Value": "Waters ACQUITY UPLC I-Class"
+  },
+  {
+    "Key": 97,
+    "Value": "Waters ACQUITY UPLC System"
+  },
+  {
+    "Key": 98,
+    "Value": "Waters Alliance 2695"
+  },
+  {
+    "Key": 99,
+    "Value": "Waters Alliance Series"
+  },
+  {
+    "Key": 100,
+    "Value": "Waters Breeze 2 HPLC System"
+  },
+  {
+    "Key": 101,
+    "Value": "Waters DeltaPrep 150 mL System"
+  },
+  {
+    "Key": 102,
+    "Value": "Waters DeltaPrep 300 mL System"
+  },
+  {
+    "Key": 103,
+    "Value": "Waters HPLC System"
+  },
+  {
+    "Key": 104,
+    "Value": "Waters LC/MS System"
+  },
+  {
+    "Key": 105,
+    "Value": "Waters nanoACQUITY UPLC System"
+  },
+  {
+    "Key": 106,
+    "Value": "Waters Prep LC System"
+  },
+  {
+    "Key": 107,
+    "Value": "Waters SuperDiscovery FC"
+  },
+  {
+    "Key": 108,
+    "Value": "ZQ,  Mass Analyzer: Q, Interface(s): ES, APCI, ES/APCI, PI"
+  }
+]

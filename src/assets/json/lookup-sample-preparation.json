@@ -1,0 +1,34 @@
+[
+  {
+    "Key": 1,
+    "Value": "Immuno Capture / Precipitation"
+  },
+  {
+    "Key": 2,
+    "Value": "SPE"
+  },
+  {
+    "Key": 3,
+    "Value": "PPT (Protein Precipitation)"
+  },
+  {
+    "Key": 4,
+    "Value": "PPT + PLR (Phospholipid Removal)"
+  },
+  {
+    "Key": 5,
+    "Value": "Filtration"
+  },
+  {
+    "Key": 6,
+    "Value": "QuEChERS"
+  },
+  {
+    "Key": 7,
+    "Value": "SLE (Simplifed Liquid Extraction)"
+  },
+  {
+    "Key": 8,
+    "Value": "LLE (Liquid Liquid Extraction)"
+  }
+]

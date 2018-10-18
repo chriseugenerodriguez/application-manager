@@ -1,0 +1,30 @@
+[
+  {
+    "Key": 1,
+    "Value": "Split"
+  },
+  {
+    "Key": 2,
+    "Value": "Splitless"
+  },
+  {
+    "Key": 3,
+    "Value": "Pulsed"
+  },
+  {
+    "Key": 4,
+    "Value": "Headspace"
+  },
+  {
+    "Key": 5,
+    "Value": "Purge and Trap"
+  },
+  {
+    "Key": 6,
+    "Value": "On-Column"
+  },
+  {
+    "Key": 7,
+    "Value": "SPME"
+  }
+]

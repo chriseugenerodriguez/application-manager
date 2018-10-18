@@ -1,0 +1,171 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+//  BEM - Block Element Modifier
+//  This is how our code is structured. Please follow this layout and format.
+//  More Info: https://css-tricks.com/bem-101/
+//
+//  .steps {
+//	    &__item {		
+//		    &--first {}
+//		    &--last {}
+//		    &--active {}
+//		    &--done {}
+//	    }
+//	    &__link {}
+//  }
+
+.tabs {
+	margin-bottom: 20px;
+	display: block;
+	border-bottom: solid 1px #d1d5da;
+
+	nav {
+		display: table;
+		height: 62px;
+
+		li {
+			@include font-size(14px);
+			display: table-cell;
+			padding-right: 20px;
+			padding-left: 20px;
+			color: #586069;
+			vertical-align: middle;
+			border-bottom: 2px solid transparent;
+			text-decoration: none;
+
+			span {
+				@include font-size(12px);
+				@include border-radius(20px);
+				display: inline-block;
+				padding: 2px 5px;
+				font-weight: 600;
+				line-height: 1;
+				color: #586069;
+				background-color: rgba(27, 31, 35, 0.08);
+			}
+
+			a {
+				color: #333;
+				text-decoration: none;
+
+				&:hover,
+				&:active,
+				&:visited {
+					text-decoration: none;
+				}
+			}
+
+			&.active {
+				border-color: orange;
+			}
+		}
+	}
+}
+
+.app-viewer {
+
+	header {
+
+		.main-action-buttons {
+			float: left;
+			margin-left: 15px;
+
+			.btn-group,
+			button {
+				width: 100%;
+			}
+		}
+	}
+
+	.scroll {
+		@media screen and (max-width: $screen-lg) {
+			overflow-x: scroll;	
+		}
+
+		.k-grid {
+			@include border-radius(3px);
+
+			@media screen and (max-width: $screen-lg) {
+				width: 1400px;		
+			}
+
+			margin-top: 20px;
+			background-color: #f6f8fa;
+			border: 1px solid #e1e4e8;
+
+			thead {
+
+				tr {
+
+					&[kendogridfilterrow] {
+
+						th {
+							padding: 4px;
+						}
+					}
+
+					th {
+						padding-top: 13px;
+						padding-bottom: 13px;
+
+						&[kendogridfiltercell] {
+							display: table-cell;
+						}
+
+						a {
+							color: #333;
+						}
+
+						button {
+
+							&:not(.k-clear-button-visible) {
+
+								[title="Clear"] {
+									display: none;
+								}
+							}
+						}
+					}
+
+					td {
+						.k-button:not(.k-clear-button-visible) {
+							display: none;
+						}
+						.k-filtercell.k-filtercell-boolean .k-filtercell-wrapper {
+							padding-right: 0px;
+						}
+					}
+				}
+			}
+
+			tbody {
+
+				tr {
+					background: #fff;
+
+					td {
+						border: none;
+						border-bottom: 1px solid #e1e4e8;
+					}
+
+					&:last-child {
+
+						td {
+							border: none;
+						}
+					}
+				}
+			}
+
+			> a {
+				&:visited,
+				&:active {
+					color: #0275d8;
+				}
+			}
+		}	
+	}
+
+}

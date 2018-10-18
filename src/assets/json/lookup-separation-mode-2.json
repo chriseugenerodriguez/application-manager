@@ -1,0 +1,17 @@
+[
+  {
+    "Key": 12,
+    "Value": "Dual Column",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 13,
+    "Value": "GC X GC (2 Dimensional GC)",
+    "ApplicationTypeKey": 2
+  },
+  {
+    "Key": 14,
+    "Value": "Single Column",
+    "ApplicationTypeKey": 2
+  }
+]

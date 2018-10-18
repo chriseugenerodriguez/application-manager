@@ -1,0 +1,81 @@
+<section class="search-user">
+	<header>
+		<h1>All Users</h1>
+		<button type="button" class="btn" (click)="openUserForm()">Add User</button> 
+	</header>
+
+	<table class="details">
+		<thead>
+			<tr>
+				<td>Email Address</td>
+				<td>Roles</td>
+				<td></td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let i of usersRolesList">
+				<td>{{ i.User.Email }}</td>
+				<td>
+					<span *ngFor="let x of i.Roles; let i = index">
+						<span *ngIf="i != 0">, </span>{{x.Name}}
+					</span>
+				</td>
+				<td class="action">
+					<a class="edit" (click)="editUser(i)">Edit</a> 
+					<a class="delete" (click)="deleteUser(i)">Delete</a>
+				</td>
+			</tr>
+			<tr *ngIf="usersRolesList.length == 0">
+				<td colspan="4">No Record Available</td>
+			</tr>
+		</tbody>
+	</table>
+</section>
+
+<!--  -->
+<kendo-dialog title="Please confirm" *ngIf="showConfirm" (close)="confirm('no')">
+	<p style="margin: 30px; text-align: center;">Are you sure you want to continue?</p>
+	<kendo-dialog-actions>
+		<button kendoButton class="k-button" (click)="confirm('no')">No</button>
+		<button class="k-button k-primary" dir="ltr" (click)="confirm('yes')" primary="true">Yes</button>
+	</kendo-dialog-actions>
+</kendo-dialog>
+
+<!-- Interstitial Windows: New User form -->
+<kendo-dialog title="New User" *ngIf="showUserForm" (close)="closeForm()" [formGroup]="userForm"> 
+	<div class="form-group row">
+    	<div class="col-md-6">
+			Select User
+		</div>
+		<div class="col-md-6">
+			Select Role(s)
+		</div>
+	</div>
+	<div class="form-group row">
+		<div class="col-md-6">
+			<kendo-combobox 
+				class="form-control"  
+				[data]="dataUsersFiltered"
+				textField="Email" 
+				valueField="ID" 
+				[(ngModel)]="selectedUserItem" 
+				formControlName="User">
+			</kendo-combobox>
+		</div>
+		<div class="col-md-6">
+			<kendo-multiselect 
+				class="form-control"  
+				[data]="dataRoles" 
+				textField="Name" 
+				valueField="Id" 
+				[(ngModel)]="selectedRoleItems" 
+				formControlName="Roles">
+			</kendo-multiselect>
+		</div> 
+	</div>	
+	
+	<kendo-dialog-actions>
+		<button class="k-button" dir="ltr" (click)="closeForm()">Cancel</button>
+		<button class="k-button k-primary" dir="ltr" (click)="onSubmit()" primary="true" [disabled]="userForm.invalid">{{ btnName }}</button>
+	</kendo-dialog-actions>	
+</kendo-dialog>

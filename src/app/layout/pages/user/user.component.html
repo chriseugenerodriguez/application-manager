@@ -1,0 +1,7 @@
+<nav class="settings">
+	<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/user/settings']">Settings</a></li>
+	<li *ngIf="admin == true" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/user/roles']">Roles</a></li>
+	<li *ngIf="admin == true" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/user/users']">Users</a></li>
+</nav>
+
+<router-outlet></router-outlet>

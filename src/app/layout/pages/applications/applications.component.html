@@ -1,0 +1,72 @@
+
+<section class="app-viewer">
+	<header class="row">
+		<div class="main-action-buttons">
+			<div class="btn-group" dropdown>
+						<button id="new-app" type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" dropdownToggle>New App <span class="caret"></span><span class="sr-only">Split button!</span></button>
+						<ul *dropdownMenu class="dropdown-menu" role="menu">
+							<li role="menuitem"><a class="dropdown-item" [routerLink]="['/form-lc']">LC</a></li>
+							<li role="menuitem"><a class="dropdown-item" [routerLink]="['/form-gc']">GC</a></li>
+						</ul>
+					</div>
+		</div>
+
+		<div class="btn-group col-md-4 options">
+			<!-- <label id="archive" class="btn">Archive</label>
+			<label id="export-conditions" class="btn">Export Conditions</label> -->
+		</div>
+
+		<div class="right" style="margin-right: 15px;">
+			<button id="clear-filter" type="button" class="btn" (click)="clearFilter()" [disabled]="disabled">Clear Filter</button>
+		</div>
+
+	</header>
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="scroll">
+				<kendo-grid 
+					[data]="grid" 
+					[pageSize]="state.take"
+					[skip]="state.skip"
+					[sort]="state.sort"
+					[filter]="state.filter"
+					[sortable]="true"
+					[pageable]="true"
+					filterable="menu"
+					(dataStateChange)="dataStateChange($event)"
+					(filterChange)="filterChange()"
+					[groupable]= "false"
+				>
+					<!-- <kendo-grid-column filter="none" title="" width="35">
+						<ng-template kendoGridCellTemplate let-dataItem>
+							<input type="checkbox" /> 
+						</ng-template>
+					</kendo-grid-column> -->
+					<kendo-grid-column field="applicationID" title="App ID">
+						<ng-template kendoGridCellTemplate let-dataItem>
+							<div *ngIf="dataItem.applicationType === 'LC'">
+								<a [routerLink]="['/form-lc/', dataItem.applicationID ]">{{ dataItem.applicationID }}</a>
+							</div>
+							<div *ngIf="dataItem.applicationType === 'GC'">
+								<a [routerLink]="['/form-gc/', dataItem.applicationID ]">{{ dataItem.applicationID }}</a>
+							</div>
+						</ng-template>
+					</kendo-grid-column>
+					<kendo-grid-column field="status"  title="Status"></kendo-grid-column>
+					<kendo-grid-column field="applicationTitle" title="App Description"></kendo-grid-column>
+					<kendo-grid-column field="partDescription1" title="Part Desc."></kendo-grid-column>
+					<kendo-grid-column field="samplePrepTitle" title="Sample Prep"></kendo-grid-column>
+					<kendo-grid-column field="applicationType" title="Technique"></kendo-grid-column>
+					<kendo-grid-column field="reviewer" title="Reviewer"></kendo-grid-column>
+					<kendo-grid-column field="createdOn" title="Created" filter="date">
+						<ng-template kendoGridCellTemplate let-dataItem>
+							{{ formatDate(dataItem.createdOn) | date:"shortDate" }}
+						</ng-template>
+					</kendo-grid-column>
+				</kendo-grid>
+			</div>
+
+		</div>
+	</div>
+</section>

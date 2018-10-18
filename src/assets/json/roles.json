@@ -1,0 +1,125 @@
+[
+  {
+    "ID": 3,
+    "Name": "RoleName100",
+    "Overview": {
+      "Read": true,
+      "Write": true
+    },
+    "ColumnDetails": {
+      "Read": true,
+      "Write": true
+    },
+    "InstrumentationConditions": {
+      "Read": true,
+      "Write": true
+    },
+    "AnalyteDetails": {
+      "Read": true,
+      "Write": true
+    },
+    "SamplePrepMethod": {
+      "Read": true,
+      "Write": true
+    },
+    "Chromatograms": {
+      "Read": true,
+      "Write": true
+    },
+    "DocumentsRelatedTerms": {
+      "Read": true,
+      "Write": true
+    },
+    "CodingRelatedTerms": {
+      "Read": true,
+      "Write": true
+    },
+    "Publish": true,
+    "Reviewer": {
+      "ID": "string",
+      "Email": "string"
+    }
+  },
+  {
+    "ID": 4,
+    "Name": "RoleName200",
+    "Overview": {
+      "Read": true,
+      "Write": true
+    },
+    "ColumnDetails": {
+      "Read": true,
+      "Write": false
+    },
+    "InstrumentationConditions": {
+      "Read": true,
+      "Write": true
+    },
+    "AnalyteDetails": {
+      "Read": false,
+      "Write": true
+    },
+    "SamplePrepMethod": {
+      "Read": true,
+      "Write": false
+    },
+    "Chromatograms": {
+      "Read": false,
+      "Write": true
+    },
+    "DocumentsRelatedTerms": {
+      "Read": true,
+      "Write": true
+    },
+    "CodingRelatedTerms": {
+      "Read": false,
+      "Write": false
+    },
+    "Publish": true,
+    "Reviewer": {
+      "ID": "string",
+      "Email": "string"
+    }
+  },
+  {
+    "Id": 4,
+    "Name": "RoleName300",
+    "Overview": {
+      "Read": true,
+      "Write": true
+    },
+    "ColumnDetails": {
+      "Read": true,
+      "Write": false
+    },
+    "InstrumentationConditions": {
+      "Read": true,
+      "Write": true
+    },
+    "AnalyteDetails": {
+      "Read": false,
+      "Write": true
+    },
+    "SamplePrepMethod": {
+      "Read": true,
+      "Write": false
+    },
+    "Chromatograms": {
+      "Read": false,
+      "Write": true
+    },
+    "DocumentsRelatedTerms": {
+      "Read": true,
+      "Write": true
+    },
+    "CodingRelatedTerms": {
+      "Read": false,
+      "Write": false
+    },
+    "Publish": true,
+    "Reviewer": {
+      "ID": "string",
+      "Email": "string"
+    }
+  }
+]

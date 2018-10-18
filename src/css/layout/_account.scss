@@ -1,0 +1,50 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+//  BEM - Block Element Modifier
+//  This is how our code is structured. Please follow this layout and format.
+//  More Info: https://css-tricks.com/bem-101/
+//
+//  .steps {
+//	    &__item {		
+//		    &--first {}
+//		    &--last {}
+//		    &--active {}
+//		    &--done {}
+//	    }
+//	    &__link {}
+//  }
+
+nav {
+	margin: 0px;
+
+	&.settings {
+		border-bottom: 1px solid #eee;
+		margin-bottom: 40px;
+		padding: 20px 20px 0;
+
+		li {
+			padding: 0 0 10px;
+			display: inline-block;
+			margin-right: 30px;
+			border-bottom: 2px solid transparent;
+			position: relative;
+			bottom: -1px;
+
+			&.active,
+			&:hover {
+				border-color: #f50;
+			}
+
+			a {
+				color: #333;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,47 @@
+<section class="setting-user">
+  <header>
+    <h1>Settings</h1>
+    <p>These are preferred defaults to apply to different aspects of this application.</p>
+  </header>
+
+  <section class="setting">
+    <h2>Homepage</h2>
+
+    <section class="sub-setting" [formGroup]="Settings">
+      <h4>Filter</h4>
+      <p class="status"><span>Status</span>
+        <kendo-combobox 
+          [data]="dataStatus"
+          textField="Value" 
+          valueField="Key" 
+          [valuePrimitive]="true"
+          (valueChange)="valueChangeStatus($event)" 
+          [(ngModel)]="selectedStatus"
+          formControlName="ApplicationStatusKey">
+        </kendo-combobox>
+      </p>
+      <p class="technology"><span>Technique</span>
+        <kendo-combobox 
+          [data]="dataTechnique"
+          textField="Value" 
+          valueField="Key" 
+          [valuePrimitive]="true"
+          (valueChange)="valueChangeTechnique($event)" 
+          [(ngModel)]="selectedTechnique"
+          formControlName="ApplicationTypeKey">
+        </kendo-combobox>
+      </p>
+      <p class="assigned-to"><span>Reviewer</span>
+        <kendo-combobox 
+          [data]="dataReviewer"
+          textField="Email" 
+          valueField="ID" 
+          (valueChange)="valueChangeReviewer($event)" 
+          [(ngModel)]="selectedReviewer"
+          formControlName="Reviewer">
+        </kendo-combobox>
+      </p>
+    </section>
+  </section>
+</section>
+

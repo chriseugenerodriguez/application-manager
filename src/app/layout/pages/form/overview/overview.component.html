@@ -1,0 +1,42 @@
+<accordion-group heading="Overview" class="overview" [class.panel-open]="Opened" [isOpen]="overviewOpened" [class.disabled]="overviewDisabled"
+  [isDisabled]="overviewDisabled" [formGroup]="Overview">
+
+  <!-- FORM -->
+  <div class="edit" *ngIf="finish">
+    <div class="form-group row">
+      <div class="col-md-7">
+        <label for="ApplicationTitle">Application Title
+          <span class="red">*</span>
+        </label>
+        <input type="text" class="form-control" aria-describedby="Title" maxlength="200" formControlName="ApplicationTitle">
+      </div>
+      <div class="col-md-5">
+        <label for="SeparationMode">Separation Mode
+          <span class="red">*</span>
+        </label>
+        <kendo-combobox class="form-control" [data]="dataSeparationMode" textField="Value" valueField="Key" valuePrimitive="true"
+          [(ngModel)]="separationModeKey" suggest="true" formControlName="SeparationModeKey" filterable="true" (filterChange)="filterSeparationMode($event)">
+        </kendo-combobox>
+      </div>
+    </div>
+    <div class="form-group row little-margin-bottom">
+      <div class="col-md-7">
+        <label for="ApplicationReason">Application Reason</label>
+        <textarea class="form-control" rows="4" aria-describedby="ApplicationReason" formControlName="ApplicationReason">
+        </textarea>
+      </div>
+      <div class="col-md-5">
+        <label for="CustomerThirdPartyDetails">Customer/Third Party Details</label>
+        <textarea class="form-control" rows="4" aria-describedby="CustomerThirdPartyDetails" formControlName="CustomerThirdPartyDetails">
+        </textarea>
+      </div>
+    </div>
+    <section class="save-submit col-md-12">
+      <!-- <input type="button" class="btn-primary btn" value="Submit" [disabled]="!Overview.valid" (click)="onSubmit()" /> -->
+    </section>
+  </div>
+
+  <div class="done" *ngIf="!finish">
+    <img class="spinner" src="./assets/svg/loader.svg"/>
+  </div>
+</accordion-group>

@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "samplePrepID": "10",
+      "samplePrepTitle": "application sample",
+      "activated": false,
+      "partNumber": "AH0-4141",
+      "partDescription1": "3-Way Valve Cap, GL45 threads",
+      "createdOn": "2018-03-09T18:02:56.51",
+      "modifiedOn": "2018-03-09T18:02:56.51"
+    },
+    {
+      "samplePrepID": "11",
+      "samplePrepTitle": "Simple Sample Propopop",
+      "activated": false,
+      "partNumber": "AH0-4141",
+      "partDescription1": "3-Way Valve Cap, GL45 threads",
+      "createdOn": "2018-03-09T19:48:31.477",
+      "modifiedOn": "2018-03-09T19:48:31.477"
+    },
+    {
+      "samplePrepID": "12",
+      "samplePrepTitle": "Simple Sample Propopop 2",
+      "activated": false,
+      "partNumber": "AH0-4141",
+      "partDescription1": "3-Way Valve Cap, GL45 threads",
+      "createdOn": "2018-03-09T19:48:52.943",
+      "modifiedOn": "2018-03-09T19:48:52.943"
+    },
+    {
+      "samplePrepID": "3",
+      "samplePrepTitle": "Test Three",
+      "activated": true,
+      "partNumber": "005000",
+      "partDescription1": "Fixed needle gas tight,",
+      "createdOn": null,
+      "modifiedOn": "2018-03-09T17:26:29.343"
+    },
+    {
+      "samplePrepID": "4",
+      "samplePrepTitle": "Test4",
+      "activated": false,
+      "partNumber": "005000",
+      "partDescription1": "Fixed needle gas tight,",
+      "createdOn": "2018-02-02T00:00:00",
+      "modifiedOn": "2018-02-03T00:00:00"
+    },
+    {
+      "samplePrepID": "5",
+      "samplePrepTitle": "Test5",
+      "activated": true,
+      "partNumber": "005000",
+      "partDescription1": "Fixed needle gas tight,",
+      "createdOn": "2018-02-02T00:00:00",
+      "modifiedOn": "2018-02-03T00:00:00"
+    },
+    {
+      "samplePrepID": "6",
+      "samplePrepTitle": "Test6",
+      "activated": true,
+      "partNumber": "8B-S035-UBJ-S",
+      "partDescription1": "Strata™-X-CW 33 µm Polymeric Weak Cation",
+      "createdOn": "2018-02-02T00:00:00",
+      "modifiedOn": "2018-02-03T00:00:00"
+    },
+    {
+      "samplePrepID": "7",
+      "samplePrepTitle": "Test5",
+      "activated": true,
+      "partNumber": "00A-4477-AN",
+      "partDescription1": "Kinetex® 2.6 µm PFP 100 Å",
+      "createdOn": "2018-02-02T00:00:00",
+      "modifiedOn": "2018-02-03T00:00:00"
+    },
+    {
+      "samplePrepID": "8",
+      "samplePrepTitle": null,
+      "activated": false,
+      "partNumber": null,
+      "partDescription1": null,
+      "createdOn": null,
+      "modifiedOn": "2018-02-03T00:00:00"
+    },
+    {
+      "samplePrepID": "9",
+      "samplePrepTitle": "Test5",
+      "activated": false,
+      "partNumber": "00A-4477-AN",
+      "partDescription1": "Kinetex® 2.6 µm PFP 100 Å",
+      "createdOn": "2018-02-02T00:00:00",
+      "modifiedOn": "2018-02-03T00:00:00"
+    }
+  ],
+  "total": 10,
+  "aggregateResults": null,
+  "errors": null
+}

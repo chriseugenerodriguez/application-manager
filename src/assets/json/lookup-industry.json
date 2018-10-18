@@ -1,0 +1,54 @@
+[
+  {
+    "Key": 1,
+    "Value": "Agriculture"
+  },
+  {
+    "Key": 2,
+    "Value": "Biopharmaceutical"
+  },
+  {
+    "Key": 3,
+    "Value": "Clinical"
+  },
+  {
+    "Key": 4,
+    "Value": "Environmental"
+  },
+  {
+    "Key": 5,
+    "Value": "Food Quality"
+  },
+  {
+    "Key": 6,
+    "Value": "Food Safety"
+  },
+  {
+    "Key": 7,
+    "Value": "Forensics/Toxicology"
+  },
+  {
+    "Key": 8,
+    "Value": "Fuels"
+  },
+  {
+    "Key": 9,
+    "Value": "Life Science"
+  },
+  {
+    "Key": 10,
+    "Value": "Personal Care/Consumer Products"
+  },
+  {
+    "Key": 11,
+    "Value": "Pharmaceutical"
+  },
+  {
+    "Key": 12,
+    "Value": "Qualify"
+  },
+  {
+    "Key": 13,
+    "Value": "Specialty Chemical/Industrial"
+  }
+]

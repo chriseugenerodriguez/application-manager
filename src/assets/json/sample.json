@@ -1,0 +1,12 @@
+{
+    "ApplicationID": "11231",
+    "ApplicationTitle": "This is the first create app",
+    "CreatedBy": "Justin Tran",
+    "CreatedOn": "2017-02-15",
+    "ModifiedOn": "2017-03-10",
+    "Published": false,
+    "StatusKey": 1,
+    "StatusValue": "Analyst Draft",
+    "ApproverValue": "Chris Rodriquez",
+    "AssignedToKey": 0
+}

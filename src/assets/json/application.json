@@ -1,0 +1,102 @@
+{
+  "ApplicationID": "7",
+  "ApplicationTitle": "Test Application4",
+  "StatusKey": 1,
+  "Published": null,
+  "CreatedBy": "3c903930-7a36-47fd-8880-e7216a208fb3",
+  "CreatedOn": "2018-05-01T00:00:00",
+  "ModifiedOn": "2018-05-01T00:00:00",
+  "Reviewer": "3c903930-7a36-47fd-8880-e7216a208fb3",
+  "ApplicationTypeKey": 2,
+  "Overview": {
+    "ApplicationReason": "Testing Reason5",
+    "CustomerThirdPartyDetails": "Third Party5",
+    "SeparationModeKey": 13
+  },
+  "ColumnDetails": {
+    "PhenomenexOrCompetitorColumnKey": 1,
+    "PartNumberKey": 200,
+    "PartNumber": "00B-4250-B0",
+    "Part": null,
+    "Description1": "Luna® 10 µm C8(2) 100 Å",
+    "Description2": "LC Column 50 x 2.0 mm",
+    "CommercialDescription": "",
+    "MfgCode": null,
+    "mfgCodeKey": 0,
+    "BrandCode": "Luna",
+    "brandCodeKey": 475,
+    "SerialNumber": "1322555",
+    "BatchNumber": "Batch100",
+    "ColumnEfficiency": "98",
+    "InletBaseSealKey": 103,
+    "PeakCapacity": "200.0000000000",
+    "InletLinerKey": 104,
+    "InletLiner": "00A-4496-AN",
+    "GuardCartridgeKey": 100,
+    "GuardCartridge": "00A-4477-AN",
+    "GuardColumnKey": 105,
+    "GuardColumn": "00A-4496-Y0",
+    "GuardHolderKey": 101,
+    "GuardHolder": "00A-4477-E0",
+    "SyringeFilterKey": 102,
+    "SyringeFilter": "00A-4477-Y0"
+  },
+  "InstrumentationConditions": {
+    "InjectionVolume": 22.5,
+    "InjectionUnitKey": 2,
+    "InjectorTemp": 30.25,
+    "ColumnTemp": 25.25,
+    "DetectorTemp": 25.26,
+    "LCSystemKey": 1,
+    "GCSystemKey": 1,
+    "DetectorTypeKey": 10,
+    "DetectorInstrumentationKey": 189,
+    "Wavelength1": 22.5,
+    "Wavelength2": 23.5,
+    "IonizationTypeKey": 1,
+    "Backpressure": 10.5,
+    "SplitRatio": "31.0000000000",
+    "SplitnessHoldTime": "51.0000000000",
+    "DetectorDetail1": 10.5,
+    "Unit1Key": 1,
+    "DetectorDetail2": 20.5,
+    "Unit2Key": 2,
+    "FlowRateUnitKey": 4,
+    "FlowRateTechniqueKey": 3,
+    "InjectionModeKey": 4,
+    "CarrierGasKey": 1,
+    "StepLC": [],
+    "StepGC": []
+  },
+  "AnalyteDetails": {
+    "MatrixKey": 2,
+    "SamplePreparationKey": 3,
+    "MatrixNotes": "Matrix Notes",
+    "AnalyteDiluentNotes": "Diluent Notes",
+    "SVGChromatogram": [],
+    "AnalyteDetailsGrid": []
+  },
+  "SamplePrepMethod": {
+    "ID": 3
+  },
+  "DocumentsOfficialMethod": {
+    "UploadDocument": [],
+    "OfficialAgencyKey": 2,
+    "OfficialMethodNumberKey": 3
+  },
+  "CodingRelatedTerms": {
+    "RelatedTerms": [],
+    "CreativeJobNumbers": "Job number 4",
+    "IndustryKey": [
+      2,
+      3,
+      4
+    ],
+    "CompoundKey": [
+      7,
+      8,
+      9
+    ]
+  },
+  "Chromatogram": []
+}

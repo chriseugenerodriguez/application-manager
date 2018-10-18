@@ -1,0 +1,29 @@
+<accordion-group heading="Chromatograms" class="gc-column-details" [class.panel-open]="Opened" [class.disabled]="ChromatogramsDisabled"
+  [isDisabled]="ChromatogramsDisabled" [isOpen]="ChromatogramsOpened" [formGroup]="ApplicationForm">
+
+  <div class="edit" *ngIf="finish">
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label>Upload Redrawn Chromatogram (.svg)
+          <span class="red">*</span>
+        </label>
+        <kendo-upload #file="kendoUpload" [multiple]="true" [saveUrl]="uploadSaveUrl" [restrictions]="imgRestrictions" aria-describedby="Chromatogram"
+          formControlName="Chromatogram" [withCredentials]="false" (upload)="uploadEvent($event)" [(ngModel)]="uploadFiles">
+          <ng-template kendoUploadFileTemplate let-files let-state="state">
+            <div *ngIf="format(state) == false" class="upload">
+              Wrong file type, please try again.
+            </div>
+            <div *ngIf="format(state)" class="upload">
+              <a (click)="download(files[0])">{{files[0].name}} </a>
+              <i (click)="removeUploadFile(file, files[0].uid)" class="fa fa-times-circle-o"></i>
+            </div>
+          </ng-template>
+        </kendo-upload>
+      </div>
+    </div>
+  </div>
+
+  <div class="done" *ngIf="!finish">
+    <img class="spinner" src="./assets/svg/loader.svg"/>
+  </div>
+</accordion-group>

@@ -1,0 +1,75 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+//  BEM - Block Element Modifier
+//  This is how our code is structured. Please follow this layout and format.
+//  More Info: https://css-tricks.com/bem-101/
+//
+//  .steps {
+//	    &__item {		
+//		    &--first {}
+//		    &--last {}
+//		    &--active {}
+//		    &--done {}
+//	    }
+//	    &__link {}
+//  }
+
+phx-users {
+	padding: 30px;
+	display: block;
+
+	header {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 40px;
+
+		h1 {
+			margin: 0px;
+		}
+	}
+
+	.details {
+		width: 100%;
+
+		thead {
+
+			td {
+				padding: 10px 0;
+				border-bottom: 1px solid #eee;
+			}
+		}
+
+		tbody {
+
+			tr {
+
+				td {
+					padding-top: 10px;
+
+					&.action {
+						text-align: right;
+
+						a {
+							&.delete {
+								margin-left: 20px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		tr {
+
+			td {
+				display: table-cell;
+			}
+		}
+	}
+
+	.k-dialog-wrapper .k-dialog {
+		width: 500px;
+	}
+}

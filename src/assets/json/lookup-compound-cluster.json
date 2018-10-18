@@ -1,0 +1,110 @@
+[
+  {
+    "Key": 1,
+    "Value": "Alternative Fuel"
+  },
+  {
+    "Key": 2,
+    "Value": "Animal / Veterinary-related"
+  },
+  {
+    "Key": 3,
+    "Value": "Biochemical - NOT Polymeric (incl. oligomers)"
+  },
+  {
+    "Key": 4,
+    "Value": "Biochemical - Polymeric"
+  },
+  {
+    "Key": 5,
+    "Value": "Biopharmaceutical"
+  },
+  {
+    "Key": 6,
+    "Value": "Chemical: Specialty Use"
+  },
+  {
+    "Key": 7,
+    "Value": "Chromatography"
+  },
+  {
+    "Key": 8,
+    "Value": "Clinical Research"
+  },
+  {
+    "Key": 9,
+    "Value": "Food and Beverage (incl. additives, contaminants)"
+  },
+  {
+    "Key": 10,
+    "Value": "Fragrance / Essential Oil"
+  },
+  {
+    "Key": 11,
+    "Value": "Herbal and Oriental Medicine"
+  },
+  {
+    "Key": 12,
+    "Value": "Inorganic Chemical"
+  },
+  {
+    "Key": 13,
+    "Value": "Laboratory-related"
+  },
+  {
+    "Key": 14,
+    "Value": "Nutraceutical"
+  },
+  {
+    "Key": 15,
+    "Value": "Oligonucleotide"
+  },
+  {
+    "Key": 16,
+    "Value": "Organic Chemical"
+  },
+  {
+    "Key": 17,
+    "Value": "Peptide"
+  },
+  {
+    "Key": 18,
+    "Value": "Personal Healthcare / Cosmetic"
+  },
+  {
+    "Key": 19,
+    "Value": "Pesticide / Insecticide"
+  },
+  {
+    "Key": 20,
+    "Value": "Petrochemical"
+  },
+  {
+    "Key": 21,
+    "Value": "Pharmaceutical"
+  },
+  {
+    "Key": 22,
+    "Value": "Pharmaceutical: Therapeutic Uses"
+  },
+  {
+    "Key": 23,
+    "Value": "Pollutant / Contaminant"
+  },
+  {
+    "Key": 24,
+    "Value": "Polymer"
+  },
+  {
+    "Key": 25,
+    "Value": "Protein"
+  },
+  {
+    "Key": 26,
+    "Value": "Textile (fiber, dye, detergent)"
+  },
+  {
+    "Key": 27,
+    "Value": "Toxicology / Drug Screening / TDM"
+  }
+]

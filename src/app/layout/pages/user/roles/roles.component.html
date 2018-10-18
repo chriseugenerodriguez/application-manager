@@ -1,0 +1,162 @@
+<section class="view-role">
+  <header>
+    <h1>All Roles</h1>
+    <button type="button" class="btn" (click)="openForm()">Add Role</button>
+  </header>
+
+  <table class="details">
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>Publish</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let role of roleList">
+        <td>{{ role.Name }}</td>
+        <td>
+          <kendo-switch [(ngModel)]="role.Publish" [disabled]="true"></kendo-switch>
+        </td>
+        <td></td>
+        <td class="action">
+          <a class="edit" (click)="editRole(role)">Edit</a>
+          <a class="delete" (click)="deleteRole(role)">Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+<!--  -->
+<kendo-dialog title="Please confirm" *ngIf="showConfirm" (close)="confirm('cancel')">
+  <p style="margin: 30px; text-align: center;">Are you sure you want to continue?</p>
+  <kendo-dialog-actions>
+    <button class="k-button" kendoButton (click)="confirm('no')">No</button>
+    <button class="k-button k-primary" dir="ltr" (click)="confirm('yes')" primary="true">Yes</button>
+  </kendo-dialog-actions>
+</kendo-dialog>
+
+<!-- FORM -->
+<kendo-dialog title="New Role" *ngIf="showForm" (close)="closeForm()" [formGroup]="roleForm">
+  <header>
+    <input type="text" placeholder="Role Name" formControlName="Name">
+  </header>
+
+  <table class="details">
+    <thead>
+      <tr>
+        <td>Privileges</td>
+        <td>Read</td>
+        <td>Write</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="overview" formGroupName="Overview">
+        <td>Overview</td>
+        <td>
+          <kendo-switch [(ngModel)]="checkOverviewRead" formControlName="Read"></kendo-switch>
+        </td>
+        <td>
+          <kendo-switch [(ngModel)]="checkOverviewWrite" formControlName="Write"></kendo-switch>
+        </td>
+      </tr>
+      <tr class="column-details" formGroupName="ColumnDetails">
+        <td>Column Details</td>
+        <td>
+          <kendo-switch [(ngModel)]="checkColumnRead" formControlName="Read"></kendo-switch>
+        </td>
+        <td>
+          <kendo-switch [(ngModel)]="checkColumnWrite" formControlName="Write"></kendo-switch>
+        </td>
+      </tr>
+      <tr class="instrumentation-conditions" formGroupName="InstrumentationConditions">
+        <td>Instrumentation and Conditions</td>
+        <td>
+          <kendo-switch [(ngModel)]="checkInstrRead" formControlName="Read"></kendo-switch>
+        </td>
+        <td>
+          <kendo-switch [(ngModel)]="checkInstrWrite" formControlName="Write"></kendo-switch>
+        </td>
+      </tr>
+      <tr class="analyte-details" formGroupName="AnalyteDetails">
+        <td>Analyte Details</td>
+        <td>
+          <kendo-switch [(ngModel)]="checkAnalyteRead" formControlName="Read"></kendo-switch>
+        </td>
+        <td>
+          <kendo-switch [(ngModel)]="checkAnalyteWrite" formControlName="Write"></kendo-switch>
+        </td>
+      </tr>
+      <tr class="sample-prep" formGroupName="SamplePrepMethod">
+        <td>Sample Prep Method</td>
+        <td>
+          <kendo-switch [(ngModel)]="checkSampleRead" formControlName="Read"></kendo-switch>
+        </td>
+        <td>
+          <kendo-switch [(ngModel)]="checkSampleWrite" formControlName="Write"></kendo-switch>
+        </td>
+      </tr>
+      <tr class="chromatograms" formGroupName="Chromatograms">
+        <td>Chromatograms</td>
+        <td>
+          <kendo-switch [(ngModel)]="checkChromRead" formControlName="Read"></kendo-switch>
+        </td>
+        <td>
+          <kendo-switch [(ngModel)]="checkChromWrite" formControlName="Write"></kendo-switch>
+        </td>
+      </tr>
+      <tr class="document-terms" formGroupName="DocumentsRelatedTerms">
+        <td>Documents and Related Terms</td>
+        <td>
+          <kendo-switch [(ngModel)]="checkDocRead" formControlName="Read"></kendo-switch>
+        </td>
+        <td>
+          <kendo-switch [(ngModel)]="checkDocWrite" formControlName="Write"></kendo-switch>
+        </td>
+      </tr>
+      <tr class="coding-related-terms" formGroupName="CodingRelatedTerms">
+        <td>Coding and Related Terms</td>
+        <td>
+          <kendo-switch [(ngModel)]="checkCodingRead" formControlName="Read"></kendo-switch>
+        </td>
+        <td>
+          <kendo-switch [(ngModel)]="checkCodingWrite" formControlName="Write"></kendo-switch>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="row publish">
+    <div class="col-md-2 title">Publish:</div>
+    <div class="col-md-2"><input type="checkbox" name="Publish" [(ngModel)]="checkPublish" formControlName="Publish"></div>
+  </div>
+
+  <div class="row publish">
+    <div class="col-md-2 title">Delete:</div>
+    <div class="col-md-2"><input type="checkbox" name="Delete" [(ngModel)]="checkDelete" formControlName="Delete"></div>
+  </div>
+
+  <div class="row publish">
+    <div class="col-md-2 title">Archive:</div>
+    <div class="col-md-2"><input type="checkbox" name="Archive" [(ngModel)]="checkArchive" formControlName="Archive"></div>
+  </div>
+
+  <div class="row assign-to">
+    <div class="col-md-6 title">Reviewer:</div>
+    <div class="col-md-6">
+      <kendo-multiselect class="form-control" [data]="userList" textField="Email" valueField="ID" [(ngModel)]="selectedReviewer"
+        formControlName="Reviewers">
+      </kendo-multiselect>
+    </div>
+  </div>
+
+  <kendo-dialog-actions>
+    <button class="k-button" dir="ltr" (click)="closeForm()">Cancel</button>
+    <button class="k-button k-primary" dir="ltr" (click)="onSubmit(roleForm)" primary="true" [disabled]="roleForm.invalid">{{
+      btnSubmit }}</button>
+  </kendo-dialog-actions>
+</kendo-dialog>

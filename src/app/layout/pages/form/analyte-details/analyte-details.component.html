@@ -1,0 +1,124 @@
+<accordion-group heading="Analyte Details" class="analyte-details" [class.panel-open]="Opened" [isOpen]="AnalyteDetailsOpened"
+  [class.disabled]="AnalyteDetailsDisabled" [isDisabled]="AnalyteDetailsDisabled" [formGroup]="AnalyteDetails">
+
+  <!-- Edit Mode -->
+  <div class="edit" *ngIf="finish">
+    <div class="form-group row">
+      <div class="col-md-4">
+        <label for="Matrix">Matrix
+          <span class="red">*</span>
+        </label>
+        <kendo-combobox class="form-control" [data]="dataMatrix" textField="Value" valueField="Key" valuePrimitive="true"
+          [(ngModel)]="matrixKey" suggest="true" formControlName="MatrixKey" filterable="true" (filterChange)="filterChangeMatrix($event)">
+        </kendo-combobox>
+      </div>
+      <div class="col-md-4">
+        <label for="SamplePreparation">Sample Preparation
+          <span class="red">*</span>
+        </label>
+        <kendo-combobox class="form-control" [data]="dataSamplePreparation" textField="Value" valueField="Key"
+          valuePrimitive="true" [(ngModel)]="samplePreparationKey" suggest="true" formControlName="SamplePreparationKey"
+          filterable="true" (filterChange)="filterChangeSamplePreparation($event)">
+        </kendo-combobox>
+      </div>
+      <div class="col-md-4">
+        <label for="UploadAnalyteDetails">Upload Analyte Details (.csv)
+          <a href="/assets/analyte-details.csv">Sample CSV</a>
+        </label>
+        <kendo-upload [multiple]="false" [saveUrl]="uploadcsv" [removeUrl]="uploadRemoveCSV" [restrictions]="csvRestrictions"
+          aria-describedby="UploadAnalyteDetails" (success)="uploadCSVSuccess($event)" formControlName="UploadAnalyteDetails"
+          (upload)="uploadCSVEvent($event)" [withCredentials]="false">
+          <ng-template kendoUploadFileTemplate let-files let-state="state">
+            <div *ngIf="format(state) == false" class="upload">
+              Wrong file type, please try again.
+            </div>
+            <div *ngIf="format(state)" class="upload">
+              {{files[0].name}}
+            </div>
+          </ng-template>
+        </kendo-upload>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-md-4">
+        <label for="MatrixNotes">Matrix Notes</label>
+        <textarea class="form-control" rows="4" aria-describedby="MatrixNotes" formControlName="MatrixNotes">
+
+        </textarea>
+      </div>
+      <div class="col-md-4">
+        <label for="AnalyteDiluentNotes">Analyte Diluent Notes</label>
+        <textarea class="form-control" rows="4" aria-describedby="AnalyteDiluentNotes" formControlName="AnalyteDiluentNotes">
+
+        </textarea>
+      </div>
+      <div class="col-md-4">
+        <label>Upload Chromatogram (.pdf)
+          <span class="red">*</span>
+        </label>
+        <pdf-viewer *ngIf="pdf" [src]="pdf" [show-all]="false" [fit-to-page]="false" [autoresize]="true"
+          [original-size]="false" [render-text]="false"></pdf-viewer>
+        <kendo-upload #file="kendoUpload" [saveUrl]="uploadsvg" [restrictions]="svgRestrictions" aria-describedby="SVGChromatogram"
+          formControlName="SVGChromatogram" [withCredentials]="false" (upload)="uploadPDFEvent($event)" [multiple]="false"
+          [(ngModel)]="uploadFiles">
+
+          <ng-template kendoUploadFileTemplate let-files let-state="state">
+            <div *ngIf="format(state) == false" class="upload">
+              Wrong file type, please try again.
+            </div>
+            <div *ngIf="format(state)" class="upload">
+              <a (click)="download(files[0])">{{files[0].name}} </a>
+              <i (click)="removeUploadFile(file, files[0].uid)" class="fa fa-times-circle-o">
+              </i>
+            </div>
+          </ng-template>
+        </kendo-upload>
+      </div>
+    </div>
+    <div class="row">
+      <div class="scroll">
+        <table class="table table-hover analyteTable">
+          <thead>
+            <tr>
+              <!-- <td>Row</td> -->
+              <td>Peak No.</td>
+              <td>CID #</td>
+              <td>Analyte Name</td>
+              <td>RT (min)</td>
+              <td>Conc. (Value and Unit)</td>
+              <td>Alpha</td>
+              <td>% Rec.</td>
+              <td>Q1</td>
+              <td>Q3</td>
+              <!-- <td></td> -->
+            </tr>
+          </thead>
+          <tbody formArrayName="AnalyteDetailsGrid">
+            <tr *ngIf="0">
+              <td colspan="10">No Data Uploaded</td>
+            </tr>
+
+            <tr *ngFor="let x of AnalyteDetails.controls.AnalyteDetailsGrid.controls; let i=index" [formGroupName]="i">
+              <td><input type="string" class="form-control" aria-describedby="Peak" formControlName="Peak"></td>
+              <td><input type="string" class="form-control" aria-describedby="CaseID" formControlName="CaseID"></td>
+              <td><input type="string" class="form-control" aria-describedby="Name" formControlName="Name"></td>
+              <td><input type="string" class="form-control" aria-describedby="RT" formControlName="RT"></td>
+              <td><input type="string" class="form-control" aria-describedby="Conc" formControlName="Conc"></td>
+              <td><input type="string" class="form-control" aria-describedby="A" formControlName="A"></td>
+              <td><input type="string" class="form-control" aria-describedby="Rec" formControlName="Rec"></td>
+              <td><input type="string" class="form-control" aria-describedby="Q1" formControlName="Q1"></td>
+              <td><input type="string" class="form-control" aria-describedby="Q3" formControlName="Q3"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <section class="save-submit col-md-12">
+      <!-- <input type="button" class="btn-primary btn" value="Submit" [disabled]="!AnalyteDetails.valid" (click)="onSubmit()" /> -->
+    </section>
+  </div>
+
+  <div class="done" *ngIf="!finish">
+    <img class="spinner" src="./assets/svg/loader.svg" />
+  </div>
+</accordion-group>

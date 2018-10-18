@@ -1,0 +1,46 @@
+[
+  {
+    "Key": 1,
+    "Value": "EPA"
+  },
+  {
+    "Key": 2,
+    "Value": "Ph.Eur."
+  },
+  {
+    "Key": 3,
+    "Value": "USP"
+  },
+  {
+    "Key": 4,
+    "Value": "ASTM"
+  },
+  {
+    "Key": 5,
+    "Value": "CEN"
+  },
+  {
+    "Key": 6,
+    "Value": "IP"
+  },
+  {
+    "Key": 7,
+    "Value": "EN"
+  },
+  {
+    "Key": 8,
+    "Value": "prEN"
+  },
+  {
+    "Key": 9,
+    "Value": "AOAC"
+  },
+  {
+    "Key": 10,
+    "Value": "ISO / IEC"
+  },
+  {
+    "Key": 11,
+    "Value": "DIN"
+  }
+]

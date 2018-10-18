@@ -1,0 +1,114 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+//  BEM - Block Element Modifier
+//  This is how our code is structured. Please follow this layout and format.
+//  More Info: https://css-tricks.com/bem-101/
+//
+//  .steps {
+//	    &__item {		
+//		    &--first {}
+//		    &--last {}
+//		    &--active {}
+//		    &--done {}
+//	    }
+//	    &__link {}
+//  }
+
+phx-roles {
+	padding: 30px;
+	display: block;
+
+	header {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 20px;
+
+		h1 {
+			margin: 0px;
+		}
+
+		input {
+			@include font-size(24px);
+			border: none;
+			border-bottom: 1px solid #eee;
+			width: 90%;
+			padding: 0 0 5px;
+
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+
+	.details {
+		width: 100%;
+		margin-bottom: 30px;
+
+		thead {
+
+			td {
+				padding: 10px 0;
+				border-bottom: 1px solid #eee;
+				font-weight: 500;
+			}
+		}
+
+		tbody {
+
+			tr {
+				td {
+					padding-top: 10px;
+
+					&.action {
+						text-align: right;
+
+						a {
+
+							&.delete {
+								margin-left: 20px;
+							}
+						}
+					}
+
+					.form-control {
+
+						&.k-dropdown {
+
+							.k-dropdown-wrap {
+								background: #fff;
+								border: 0px;
+							}
+
+							&.k-state-focused {
+								@include box-shadow(0 0 8px rgba(102, 175, 233, .6));
+							}
+						}
+					}
+				}
+			}
+		}
+
+		tr {
+
+			td {
+				display: table-cell;
+			}
+		}
+	}
+
+	.title {
+		margin-bottom: 30px;
+		font-weight: 500;
+	}
+
+	kendo-multiselect {
+		position: relative;
+		top: -5px;
+	}
+
+	.k-dialog-wrapper .k-dialog {
+		width: 400px;
+	}
+}

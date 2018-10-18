@@ -1,0 +1,78 @@
+[
+  {
+    "Key": 1,
+    "Value": "Condition"
+  },
+  {
+    "Key": 2,
+    "Value": "Equilibrate"
+  },
+  {
+    "Key": 3,
+    "Value": "Load"
+  },
+  {
+    "Key": 4,
+    "Value": "Wash"
+  },
+  {
+    "Key": 5,
+    "Value": "Dry"
+  },
+  {
+    "Key": 6,
+    "Value": "Elute"
+  },
+  {
+    "Key": 7,
+    "Value": "Wait"
+  },
+  {
+    "Key": 8,
+    "Value": "Dry Down"
+  },
+  {
+    "Key": 9,
+    "Value": "Reconstitute"
+  },
+  {
+    "Key": 10,
+    "Value": "Vacuum"
+  },
+  {
+    "Key": 11,
+    "Value": "Positive Pressure"
+  },
+  {
+    "Key": 12,
+    "Value": "Dispense"
+  },
+  {
+    "Key": 13,
+    "Value": "Vortex"
+  },
+  {
+    "Key": 14,
+    "Value": "Homogenize"
+  },
+  {
+    "Key": 15,
+    "Value": "Weigh"
+  },
+  {
+    "Key": 16,
+    "Value": "Add"
+  },
+  {
+    "Key": 17,
+    "Value": "Shake"
+  },
+  {
+    "Key": 18,
+    "Value": "Centrifuge"
+  },
+  {
+    "Key": 19,
+    "Value": "Transfer"
+  }
+]

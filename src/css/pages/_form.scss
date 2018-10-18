@@ -1,0 +1,564 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+//  BEM - Block Element Modifier
+//  This is how our code is structured. Please follow this layout and format.
+//  More Info: https://css-tricks.com/bem-101/
+//
+//  .steps {
+//	    &__item {		
+//		    &--first {}
+//		    &--last {}
+//		    &--active {}
+//		    &--done {}
+//	    }
+//	    &__link {}
+//  }
+phx-app {
+  phx-form,
+  phx-sample-pre-create {
+    .create-sample-prep {
+      .btn-full {
+        width: 100%;
+      }
+      .table {
+        @include font-size(13px);
+        td {
+          vertical-align: middle;
+          kendo-maskedtextbox {
+            input {
+              @include border-radius(4px);
+              @include font-size(14px);
+              border: 1px solid #ddd;
+              height: 34px;
+              padding: 6px 12px;
+            }
+          }
+          span {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .content {
+      position: relative;
+      padding: 35px 30px 35px 15px;
+      header {
+        margin: 0 0 10px;
+        float: left;
+        width: 100%;
+        input {
+          @include border-radius(3px);
+          @include font-size(20px);
+          height: inherit;
+          line-height: 30px;
+          box-shadow: none;
+          margin-top: 0px;
+          &:focus {
+            @include box-shadow(none);
+          }
+          &.ng-touched {
+            &.ng-invalid {
+              border-color: #f00;
+            }
+          }
+          &::placeholder {
+            color: #ccc;
+          }
+        }
+        h4 {
+          float: left;
+          margin: 10px 0 0;
+        }
+        a {
+          @include font-size(14px);
+          cursor: pointer;
+          float: right;
+          margin-top: 10px;
+        }
+      }
+      h1 {
+        @include font-size(26px);
+        margin-top: 0px;
+        color: #333;
+        float: left;
+      }
+      .clone, .delete {
+        float: right;
+      }
+      .delete {
+        background: transparent;
+        margin-left: 20px;
+        border: 0px;
+        padding: 0px;
+        display: flex;
+        overflow:hidden;
+        cursor: pointer;
+        .icon {
+            @include font-size(16px);
+            @include border-radius(3px);
+            position: relative;
+            background: #333;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(top bottom, #434343, #333);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(top bottom, #434343, #333); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            line-height: 34px;
+            width: 34px;
+            height: 34px;
+            text-align: center;
+            color: #fff;
+            transition: .2s color;
+            .fa {
+                width: 34px;
+                transition: .2s all;
+            }
+            .fa-check { color: green; }
+            .fa-question { color: blue; }
+            &:after {
+                content: ' ';
+                display: block;
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                transform: rotate(45deg);
+                background: #333;
+                top: 14.5px;
+                right: 1px;
+                transition: .2s right;
+                z-index: 1;
+            }
+        }
+        .text {
+            position: relative;
+            width: 0;
+            height: 34px;
+            overflow: hidden;
+            font-family: "Roboto", sans-serif;
+            text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+            background-color: #f62b2b; background-image: -webkit-gradient(linear, left top, left bottom, from(#f62b2b), to(#d20202));
+            background-image: -webkit-linear-gradient(top, #f62b2b, #d20202);
+            background-image: -moz-linear-gradient(top, #f62b2b, #d20202);
+            background-image: -ms-linear-gradient(top, #f62b2b, #d20202);
+            background-image: -o-linear-gradient(top, #f62b2b, #d20202);
+            background-image: linear-gradient(to bottom, #f62b2b, #d20202);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#f62b2b, endColorstr=#d20202);
+            text-align: center;
+            line-height: 34px;
+            color: #fff;
+            font-weight: 300;
+            transition: .2s all;
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+            span {
+                width: 100%;
+                opacity: 0;
+                position: absolute;
+                top: -34px;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: .3s all;
+            }
+        }
+        &:not(.done) {
+          &:hover {
+              .icon {
+                  @include border-radius(0px);
+                  color: #f62b2b;
+                  border-top-left-radius: 3px;
+                  border-bottom-left-radius: 3px;
+                  &:after { right: -2px; }
+              }
+              .text {
+                  width: 100px;
+                  span { 
+                    @include opacity(1);
+                    top: 1px; 
+                  }
+              }
+          }
+        }
+        &.confirm {
+            .icon {
+                border-radius: 0;
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+
+                &:after { right: -2px }
+            }
+            .text {
+                background: blue;
+                width: 100px;
+                span { 
+                  @include opacity(1);
+                  top: 1px; 
+                }
+            }
+        }
+      }
+
+      .application-details {
+        float:left;
+        width: 100%;
+
+        .disabled {
+          .panel {
+            @include opacity(.5);
+            [role="button"] {
+              cursor: default;
+            }
+          }
+        }
+        .panel-group {
+          position: relative;
+          accordion-group {
+            &.panel-open {
+              [role='tabpanel'] {
+                display: block !important;
+              }
+            }
+            &.valid {
+              .panel-heading {
+                background: #94bd52 !important;
+              }
+              .panel {
+                border-color: #4b8b1d !important;
+                .panel-body {
+                  border-color: #4b8b1d !important;
+                }
+              }
+              &.disabled {
+                .panel-heading {
+                  background: #f6f8fa !important;
+                }
+                .panel {
+                  border-color: #d1d5da !important;
+                }
+              }
+            }
+            .panel {
+              @include border-radius(3px);
+              margin: 12px 0 0;
+              border: 1px solid #d1d5da;
+              font-weight: 600;
+              box-shadow: none;
+              width: 100%;
+              float: left;
+              .panel-heading {
+                @include font-size(30px);
+                background: #f6f8fa;
+                text-align: left;
+                padding: 12px;
+                letter-spacing: .5px;
+              }
+              .panel-body {
+                position: relative;
+                padding: 20px;
+                @media (max-width: $screen-md) {
+                  input, kendo-dropdownlist, textarea {
+                    margin-bottom: 20px;
+                  }
+                }
+                .related-terms {
+                  display: table;
+                  width: 100%;
+                  .btn {
+                    width: auto;
+                  }
+                  .added-terms {
+                    @include border-radius(3px);
+                    margin: 20px 15px 0;
+                    border: 1px solid #ddd;
+                    padding: 20px 15px 10px;
+                    background: #fafafa;
+                    display: inline-table;
+                    width: 100%;
+                    li {
+                      @include border-radius(20px);
+                      background: #ddd;
+                      display: inline-block;
+                      margin: 0 5px 10px;
+                      padding: 5px 5px 5px 7px;
+                      span {
+                        &:first-of-type {
+                          font-weight: 200;
+                        }
+                        &.fa {
+                          margin-left: 5px;
+                          cursor: pointer;
+                        }
+                      }
+                    }
+                  }
+                }
+                .form-control {
+                  @include box-shadow(none);
+                  &:not(.k-widget) {
+                    border: 1px solid #ddd;
+                  }
+                  .k-dropdown-wrap {
+                    @include border-radius(4px);
+                    border: 1px solid #ddd;
+                  }
+                  &.k-dropdown {
+                    .k-dropdown-wrap {
+                      background: #fff;
+                    }
+                    &.k-state-focused {
+                      @include box-shadow(0 0 8px rgba(102, 175, 233, .6));
+                    }
+                  }
+                  &:focus {
+                    @include box-shadow(0 0 8px rgba(102, 175, 233, .6));
+                  }
+                  &.ng-touched {
+                    &.ng-invalid {
+                      color: #f31700;
+                      border-color: #f00;
+                      .k-dropdown-wrap {
+                        border-color: #f00;
+                      }
+                    }
+                  }
+                }
+                .table {
+                  @include font-size(13px);
+                  td {
+                    vertical-align: middle;
+                    kendo-maskedtextbox {
+                      input {
+                        @include border-radius(4px);
+                        @include font-size(14px);
+                        border: 1px solid #ddd;
+                        height: 34px;
+                        padding: 6px 12px;
+                      }
+                    }
+                    span {
+                      cursor: pointer;
+                    }
+                  }
+                }
+                .btn-full {
+                  width: 100%;
+                }
+                .k-upload {
+                  .k-upload-button {
+                    padding: 2px 8px;
+                    margin: 3px;
+                  }
+                }
+                .k-grid {
+                  .k-dropdown {
+                    .k-dropdown-wrap {
+                      background: #fff;
+                    }
+                  }
+                  input,
+                  .k-select {
+                    margin-left: 0px;
+                  }
+                  td {
+                    padding: 8px;
+                  }
+                }
+                .row {
+                  &:last-child {
+                    margin-bottom: 0px;
+                  }
+                  .scroll {
+                    overflow-x: scroll;
+                    margin: 15px 15px 20px;
+                    table {
+                      width: 1800px;
+                      margin: 0px;
+                      .red {
+                        color: red;
+                      }
+                    }
+                  }
+                }
+                .form-group {
+                  label {
+                    display: block;
+                    margin-bottom: 10px;
+                    font-size: 13px;
+                    font-weight: 600;
+                    a {
+                      float: right;
+                    }
+                    .red {
+                      color: red;
+                    }
+                  }
+
+                  kendo-autocomplete {
+                    &[formcontrolname="PartNumber"] {
+                      input {
+                        text-transform: uppercase;
+                      }
+                    }
+                  }
+
+                  pdf-viewer {
+                    display: block;
+                    max-height: 300px;
+                    overflow-y: scroll;
+
+                    .ng2-pdf-viewer-container[_ngcontent-c0] {
+                      overflow: hidden;
+
+                      .pdfViewer .page {
+                        border: none;
+                      }
+                    }
+                  }
+
+                  &:last-child {
+                    p {
+                      margin-bottom: 0px;
+                    }
+                  }
+                }
+
+                .k-state-disabled {
+                  @include opacity(1);
+                  @include box-shadow(none);
+                  background: #eee;
+                  border: 1px solid #ddd;
+                  
+                  .k-multiselect-wrap {
+                    background: #eee;
+                    border: none;
+                  }
+                }
+
+                .k-upload-files {
+                  .upload {
+                    @include font-size(12px);
+                    position: relative;
+                    width: 100%;
+
+                    i {
+                      position: absolute;
+                      right: 4px;
+                      top: 3px;
+                      cursor: pointer;
+
+                      &:hover {
+                        color:#333;
+                      }
+                    }
+                  }
+                }
+
+                .done {
+                  text-align: center;
+
+                  img {
+                    width: 40px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .save-submit {
+          margin-top: 20px;
+          text-align: right;
+          button {
+            display: inline-block;
+            width: 150px;
+            margin: 0 0 0 10px;
+          }
+        }
+        phx-sample-preparation-methodology {
+          .btn-primary {
+            margin-top: 26px;
+            &:last-child {
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+    }
+    aside {
+      border-left: 1px solid #f5f5f5;
+      padding: 35px !important;
+      position: absolute !important;
+      top: 0;
+      right: 0;
+      bottom: 0;
+			width: 100%;
+
+      section {
+        margin-bottom: 35px;
+
+        &.permissions {
+          padding: 0px;
+        }
+        &:last-child {
+          border: none;
+        }
+        label {
+          @include font-size(13px);
+          color: #999;
+          margin-bottom: 10px;
+          line-height: 16px;
+          display: block;
+          font-weight: 600;
+          padding-bottom: 5px;
+          border-bottom: 1px solid #f2f2f2;
+        }
+        span {
+          @include font-size(12px);
+        }
+      }
+      .error {
+        @include font-size(12px);
+        @include border-radius(3px);
+        margin: -5px 0 20px 0;
+        border: 1px solid red;
+        background: lightcoral;
+        padding: 10px;
+        color: #fff;
+        text-align: center;
+        &.nomargin {
+          margin: 0 0 15px 0;
+        }
+      }
+      button {
+        display: inline-block;
+        &.btn-primary {
+          &:only-child {
+            width: 100%;
+          }
+          &:not(:only-child) {
+            margin-left: 10px;
+            @media (min-width: $screen-lg) {
+              width: 55%;
+            }
+          }
+        }
+      }
+    }
+    .k-dialog-titlebar {
+      padding: 12px 16px;
+    }
+  }
+  .k-multiselect-wrap {
+    .k-button {
+      margin: 4px 0 0 4px;
+      &:last-child {
+        margin-bottom: 4px;
+      }
+    }
+  }
+  .kendo-item {
+    display: flex;
+    width: 100%;
+    span {
+      display: inline-flex;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "Key": 1,
+    "Value": "AC Analytical Controls Simdis"
+  },
+  {
+    "Key": 2,
+    "Value": "Agilent Intuvo 9000 GC System"
+  },
+  {
+    "Key": 3,
+    "Value": "GC System (Unknown)"
+  },
+  {
+    "Key": 4,
+    "Value": "Grace GC System"
+  },
+  {
+    "Key": 5,
+    "Value": "HP 5850"
+  },
+  {
+    "Key": 6,
+    "Value": "HP 5880"
+  },
+  {
+    "Key": 7,
+    "Value": "HP 5890"
+  },
+  {
+    "Key": 8,
+    "Value": "HP 6850"
+  },
+  {
+    "Key": 9,
+    "Value": "HP 6890"
+  },
+  {
+    "Key": 10,
+    "Value": "HP 7890"
+  },
+  {
+    "Key": 11,
+    "Value": "HP GC System (Unknown)"
+  },
+  {
+    "Key": 12,
+    "Value": "Shimadzu GC System"
+  },
+  {
+    "Key": 13,
+    "Value": "Varian GC System"
+  }
+]

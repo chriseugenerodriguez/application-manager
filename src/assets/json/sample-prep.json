@@ -1,0 +1,52 @@
+{
+  "SamplePrepID": 10,
+  "SamplePrepTitle": "application sample",
+  "Activated": false,
+  "CreatedOn": "2018-03-09T18:02:56.51",
+  "ModifiedOn": "2018-03-09T18:02:56.51",
+  "PreTreatmentNotes": "Pre-Treatment Notes",
+  "SamplePrepNotes": "Sample Prep. Notes\n",
+  "SamplePrepTechniqueKey": 2,
+  "PHECompetitorKey": 1,
+  "PHEPartNumberKey": 6274,
+  "PartNumber": "AH0-4141",
+  "Part": {
+    "MfgCodeKey": 957,
+    "BrandCodeKey": 137,
+    "FormatTypeKey": 0,
+    "FormatVolume": 0,
+    "VolumeUnitKey": 0,
+    "MassUnitKey": 0,
+    "FormatMass": 0,
+    "InternalDiameter": 0,
+    "FilmThickness": 0,
+    "ParticleSize": 0,
+    "Length": 0,
+    "PoreSize": 0,
+    "Description1": "3-Way Valve Cap, GL45 threads",
+    "Description2": "solid PTFE block construction"
+  },
+  "Description1": "3-Way Valve Cap, GL45 threads",
+  "Description2": "solid PTFE block construction",
+  "CommercialDescription": "",
+  "MfgCode": "WESTERN ANALYTICAL PRODUCTS",
+  "BrandCode": "Capillary / Connecting Tubing and Related (HPLC)",
+  "mfgCodeKey": 957,
+  "brandCodeKey": 137,
+  "MassUnit": "0",
+  "FormatType": null,
+  "FormatVolume": "0.0000000000",
+  "VolumeUnit": null,
+  "FormatMass": "0.0000000000",
+  "CollectionPlateKey": 46,
+  "SealingMatKey": 135,
+  "SorbentLot": "23456",
+  "ProductionLot": "123456",
+  "Steps": [
+    {
+      "Step": 0,
+      "TypeKey": 1,
+      "Details": "condition"
+    }
+  ]
+}

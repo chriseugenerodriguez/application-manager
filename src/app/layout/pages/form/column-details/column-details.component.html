@@ -1,0 +1,323 @@
+<accordion-group heading="Column Details" class="column-details" [class.panel-open]="Opened" [class.disabled]="ColumnDetailsDisabled" [isOpen]="ColumnDetailsOpened" 
+[isDisabled]="ColumnDetailsDisabled" [formGroup]="ColumnDetails">
+
+  <!-- Editable Form -->
+  <div class="edit" *ngIf="finish">
+    <div class="form-group row">
+      <div class="col-md-5">
+        <label for="PHECompetitor">PHE or Competitor <span class="red">*</span></label>
+        <kendo-combobox 
+          class="form-control" 
+          [data]="dataPHECompetitor" 
+          textField="Value" 
+          valueField="Key" 
+          valuePrimitive="true"
+          suggest="true"
+          (valueChange)="valueChangePHECompetitor($event)"
+          aria-describedby="PHECompetitorKey" 
+          formControlName="PhenomenexOrCompetitorColumnKey"
+          [(ngModel)]="pheCompetitorKey" 
+          filterable="true"
+          (filterChange)="filterChangePHECompetitor($event)"
+        >
+        </kendo-combobox> 
+      </div>
+    </div>
+    <div class="form-group row" *ngIf="pheCompetitorKey != null">
+      <div class="col-md-4" *ngIf="pheCompetitorKey === 1">
+        <label for="PartNumber">Part Number</label>
+        <kendo-autocomplete
+          class="form-control"
+          [data]="PartNumber"
+          [filterable]="true"
+          valueField="Value"
+          formControlName="PartNumber"
+          (filterChange)="filterChangePartNumber($event)"
+          (valueChange)="valueChangePartNumber($event)"
+          (keydown.tab)="selectPart($event)"
+          (keydown.enter)="selectPart($event)"
+          [placeholder]="'e.g. AH0'"
+        >
+        </kendo-autocomplete>   
+      </div>
+      <div class="col-md-4" *ngIf="pheCompetitorKey !== 1">
+          <label for="PartNumber">Part Number</label>
+          <input 
+            type="text" 
+            class="form-control" 
+            aria-describedby="PartNumber" 
+            formControlName="PartNumber"
+          >
+        </div>
+      <div class="col-md-8" *ngIf="pheCompetitorKey !== 1">
+        <label for="CommercialDescription">Commercial Description</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          id="applicationId1" 
+          aria-describedby="CommercialDescription" 
+          formControlName="CommercialDescription"
+        >
+      </div>
+      <div class="col-md-4" *ngIf="pheCompetitorKey === 1">
+        <label for="Description1">Description 1</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          aria-describedby="Description1" 
+          formControlName="Description1"
+        >
+      </div>
+      <div class="col-md-4" *ngIf="pheCompetitorKey === 1">
+        <label for="Description2">Description 2</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          aria-describedby="Description2" 
+          formControlName="Description2"
+        >
+      </div>
+    </div>
+
+    <div class="form-group row" *ngIf="pheCompetitorKey != null">
+      <div class="col-md-4" *ngIf="pheCompetitorKey === 1">
+        <label for="MfgCode">Mfg Code</label>
+        <input type="text" class="form-control" aria-describedby="MfgCode" formControlName="MfgCode">
+      </div>
+      <div class="col-md-4" *ngIf="pheCompetitorKey !== 1">
+        <label for="MfgCode">Mfg Code</label>
+        <kendo-combobox 
+          class="form-control" 
+          [data]="dataMfgCode"
+          textField="Value"
+          valueField="Key"
+          valuePrimitive="true"
+          suggest="true"
+          formControlName="MfgCodeKey"
+          [(ngModel)]="mfgCodeKey"
+          filterable="true"
+          (filterChange)="filterChangeMfgCode($event)"
+        >
+        </kendo-combobox> 
+      </div>						
+      <div class="col-md-4" *ngIf="pheCompetitorKey === 1">
+        <label for="Brand">Brand Code</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          aria-describedby="BrandCode" 
+          formControlName="BrandCode"
+        >
+      </div>
+      <div class="col-md-4" *ngIf="pheCompetitorKey !== 1">
+        <label for="Brand">Brand Code</label>
+        <kendo-combobox 
+          class="form-control" 
+          [data]="dataBrandCode"
+          textField="Value"
+          valueField="Key"
+          valuePrimitive="true"
+          suggest="true"
+          formControlName="BrandCodeKey"
+          [(ngModel)]="brandCodeKey"
+          filterable="true"
+          (filterChange)="filterChangeBrandCode($event)"
+        >
+        </kendo-combobox> 
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="Length">Length (mm) <span *ngIf="pheCompetitorKey !== 1" class="red">*</span></label>
+          <input
+            type="number"
+            step=".01" 
+            class="form-control" 
+            aria-describedby="Length" 
+            formControlName="Length"
+          >
+        </div>
+      </div>
+    </div>
+    
+    <div class="form-group row" *ngIf="pheCompetitorKey != null">
+      <div class="col-md-4">
+        <label for="InternalDiameter">Internal Diameter (mm)  <span *ngIf="pheCompetitorKey !== 1" class="red">*</span></label>
+        <input
+          type="number"
+          step=".01" 
+          class="form-control" 
+          aria-describedby="InternalDiameter" 
+          formControlName="InternalDiameter"
+        >
+      </div>
+      <div class="col-md-4" *ngIf="location.indexOf('form-gc') !== -1">
+        <label for="FilmThickness">Film Thickness (µm) <span *ngIf="pheCompetitorKey !== 1" class="red">*</span></label>
+        <input 
+          type="number"
+          step=".01" 
+          class="form-control" 
+          aria-describedby="FilmThickness" 
+          formControlName="FilmThickness"
+        >
+      </div>
+      <div class="col-md-4" *ngIf="location.indexOf('form-lc') !== -1">
+        <label for="ParticleSize">Particle Size (µm) <span *ngIf="pheCompetitorKey !== 1" class="red">*</span></label>
+        <input
+          type="number"
+          step=".01" 
+          class="form-control" 
+          aria-describedby="ParticleSize" 
+          formControlName="ParticleSize"
+        >
+      </div>
+      <div class="col-md-4" *ngIf="location.indexOf('form-lc') !== -1">
+        <label for="PoreSize">Pore Size (Å) <span *ngIf="pheCompetitorKey !== 1" class="red">*</span></label>
+        <input 
+          type="number"
+          step=".01" 
+          class="form-control" 
+          aria-describedby="PoreSize" 
+          formControlName="PoreSize"
+        >
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-md-3">
+        <label for="SerialNumber">Serial Number</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          aria-describedby="SerialNumber" 
+          formControlName="SerialNumber"
+        >
+      </div>
+      <div class="col-md-3">
+        <label for="BatchNumber">Batch Number</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          aria-describedby="BatchNumber" 
+          formControlName="BatchNumber"
+        >
+      </div>
+      <div class="col-md-3">
+        <label for="ColumnEfficiency">Column Efficiency</label>
+        <input 
+          type="number"
+          class="form-control"
+          aria-describedby="ColumnEfficiency" 
+          formControlName="ColumnEfficiency"
+        >
+      </div>
+      <div class="col-md-3" *ngIf="location.indexOf('form-gc') !== -1">
+        <label for="InletBaseSeal">Inlet Base Seal</label>
+        <kendo-autocomplete
+          #autocomplete
+          class="form-control"
+          [data]="InletBaseSeal"
+          [filterable]="true"
+          valueField="Value"
+          formControlName="InletBaseSeal"
+          (filterChange)="filterChangeInletBaseSeal($event)"
+          (valueChange)="valueChangeInletBaseSeal($event)"
+          [placeholder]="'e.g. 00A-0138-E0'"
+        >
+        </kendo-autocomplete>
+      </div>
+      <div class="col-md-3" *ngIf="location.indexOf('form-lc') !== -1">
+        <label for="PeakCapacity">Peak Capacity</label>
+        <input 
+          type="number"
+          step=".01" 
+          class="form-control"
+          aria-describedby="PeakCapacity" 
+          formControlName="PeakCapacity"
+        >  
+      </div>
+    </div>
+    
+    <div class="form-group row little-margin-bottom">
+      <div class="col-md-4" *ngIf="location.indexOf('form-gc') !== -1">
+        <label for="InletLiner">Inlet Liner</label>
+        <kendo-autocomplete
+          #autocomplete
+          class="form-control"
+          [data]="InletLiner"
+          [filterable]="true"
+          valueField="Value"
+          formControlName="InletLiner"
+          (filterChange)="filterChangeInletLiner($event)"
+          (valueChange)="valueChangeInletLiner($event)"
+          [placeholder]="'e.g. 00A-0138-E0'"
+        >
+        </kendo-autocomplete>
+      </div>
+      <div class="col-md-4" *ngIf="location.indexOf('form-lc') !== -1">
+        <label for="GuardCartridge">Guard Cartridge</label>
+        <kendo-autocomplete
+          #autocomplete
+          class="form-control"
+          [data]="GuardCartridge"
+          [filterable]="true"
+          valueField="Value"
+          formControlName="GuardCartridge"
+          (filterChange)="filterChangeGuardCartridge($event)"
+          (valueChange)="valueChangeGuardCartridge($event)"
+          [placeholder]="'e.g. AH0-1562'"
+        >
+        </kendo-autocomplete>
+      </div>
+      <div class="col-md-4" *ngIf="location.indexOf('form-gc') !== -1">
+        <label for="GuardColumn">Guard Column</label>
+        <kendo-autocomplete
+          #autocomplete
+          class="form-control"
+          [data]="GuardColumn"
+          [filterable]="true"
+          valueField="Value"
+          formControlName="GuardColumn"
+          (filterChange)="filterChangeGuardColumn($event)"
+          (valueChange)="valueChangeGuardColumn($event)"
+          [placeholder]="'e.g. 03A-4274-E0'"
+        >
+        </kendo-autocomplete>
+      </div>
+      <div class="col-md-4" *ngIf="location.indexOf('form-lc') !== -1">
+        <label for="GuardHolder">Guard Holder</label>  
+        <kendo-autocomplete
+          class="form-control"
+          [data]="GuardHolder"
+          [filterable]="true"
+          valueField="Value"
+          formControlName="GuardHolder"
+          (filterChange)="filterChangeGuardHolder($event)"
+          (valueChange)="valueChangeGuardHolder($event)"
+          [placeholder]="'e.g. AQ0-831'"
+        >
+        </kendo-autocomplete>   
+      </div>
+      <div class="col-md-4">
+        <label for="SyringeFilter">Syringe Filter</label>
+        <kendo-autocomplete
+          class="form-control"
+          [data]="SyringeFilter"
+          [filterable]="true"
+          valueField="Value"
+          formControlName="SyringeFilter"
+          (filterChange)="filterChangeSyringeFilter($event)"
+          (valueChange)="valueChangeSyringeFilter($event)"
+          [placeholder]="'e.g. AF0-2107'"
+        >
+        </kendo-autocomplete>  
+      </div>
+    </div>
+    
+    <section class="save-submit col-md-12">
+      <!-- <input type="button" class="btn-primary btn" value="Submit" [disabled]="!ColumnDetails.valid" (click)="onSubmit()" /> -->
+    </section>
+  </div>
+
+  <div class="done" *ngIf="!finish">
+    <img class="spinner" src="./assets/svg/loader.svg"/>
+  </div>
+</accordion-group>

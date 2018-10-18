@@ -1,0 +1,80 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+//  BEM - Block Element Modifier
+//  This is how our code is structured. Please follow this layout and format.
+//  More Info: https://css-tricks.com/bem-101/
+//
+//  .steps {
+//	    &__item {		
+//		    &--first {}
+//		    &--last {}
+//		    &--active {}
+//		    &--done {}
+//	    }
+//	    &__link {}
+//  }
+
+phx-login {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 500px;
+
+	.login {
+		width: 300px;
+
+		h1 {
+			border: 1px solid #ddd;
+			border-radius: 100%;
+			padding: 10px 10px 13px;
+			width: 59px;
+			margin: 0px auto 20px;
+			line-height: 1;
+			background: #fafafa;
+			color: #333;
+		}
+
+		.form-group {
+
+			&.password {
+				position: relative;
+
+				img {
+					position: absolute;
+					top: 9px;
+					right: 9px;
+				}
+			}
+
+			&.has-error {
+
+				.help-block {
+					@include border-radius(0 0 3px 3px);
+					margin-top: 0px;
+					background: red;
+					color: white;
+					font-size: 10px;
+					text-transform: uppercase;
+					padding: 5px 0;
+					letter-spacing: .5;
+				}
+
+				input {
+
+					&.ng-invalid {
+						@include border-radius(3px 3px 0 0);
+						border-color: red;
+					}
+				}
+			}
+		}
+
+		button {
+			margin-top: 10px;
+			width: 100%;
+		}
+	}
+}

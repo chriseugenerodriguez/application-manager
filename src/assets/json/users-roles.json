@@ -1,0 +1,30 @@
+[
+  {
+    "User": {
+      "ID": "3d0a5e38-beaf-4cf7-b42f-1ff8bf23390c",
+      "Email": "chrisr@phenomenex.com"
+    },
+    "Roles": [
+      {
+        "ID": 3,
+        "Name": "RoleName100"
+      },
+      {
+        "ID": 4,
+        "Name": "RoleName200"
+      }
+    ]
+  },
+  {
+    "User":  {
+      "ID": "a8132605-6392-4a9b-9b72-c146ab88f638",
+      "Email": "bentsui@gatech.edu"
+    },
+    "Roles": [
+      {
+        "ID": 3,
+        "Name": "RoleName100"
+      }
+    ]
+  }
+]

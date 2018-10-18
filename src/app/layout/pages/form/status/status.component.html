@@ -1,0 +1,47 @@
+<div class="bs-wizard">
+		<div [class.active]="AnalystDraft" class="bs-wizard-step">
+			<div class="text-center bs-wizard-stepnum">Analyst Draft</div>
+			<div class="progress">
+				<div class="progress-bar"></div>
+			</div>
+		</div>
+		<div [class.active]="AnalystReview" class="bs-wizard-step">
+			<div class="text-center bs-wizard-stepnum">Analyst Review</div>
+			<div class="progress">
+				<div class="progress-bar"></div>
+			</div>
+		</div>
+		<div [class.active]="MarketingDraft" class="bs-wizard-step">
+			<div class="text-center bs-wizard-stepnum">Marketing Draft</div>
+			<div class="progress">
+				<div class="progress-bar"></div>
+			</div>
+		</div>
+		<div [class.active]="MarketingReview" class="bs-wizard-step">
+			<div class="text-center bs-wizard-stepnum">Marketing Review</div>
+			<div class="progress">
+				<div class="progress-bar"></div>
+			</div>
+		</div>
+		<div [class.active]="ChromatogramUpload" class="bs-wizard-step">
+			<div class="text-center bs-wizard-stepnum">Chromatogram Upload</div>
+			<div class="progress">
+				<div class="progress-bar"></div>
+			</div>
+		</div>
+		<div [class.active]="WebApproval" class="bs-wizard-step">
+			<div class="text-center bs-wizard-stepnum">Ready for Web Approval</div>
+			<div class="progress">
+				<div class="progress-bar"></div>
+			</div>
+		</div>
+		<div [class.active]="PHE" class="bs-wizard-step">
+			<div class="text-center bs-wizard-stepnum">
+				<span *ngIf="(!Archive && PHE)">On PHE.com</span>
+				<span *ngIf="(Archive && PHE)">Hidden from Web</span>
+			</div>
+			<div class="progress">
+				<div class="progress-bar"></div>
+			</div>
+		</div>
+	</div>

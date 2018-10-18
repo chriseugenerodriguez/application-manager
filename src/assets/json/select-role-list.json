@@ -1,0 +1,87 @@
+[
+    { 
+        "ID":2, 
+        "Name": "Role A", 
+        "Overview": { "Read": true, "Write": false },
+        "ColumnDetails": { "Read": false, "Write": true },
+        "InstrumentationConditions": { "Read": true, "Write": true },
+        "AnalyteDetails": { "Read": false, "Write": false },
+        "SamplePrepMethod": { "Read": true, "Write": true },
+        "Chromatograms": { "Read": true, "Write": false },
+        "DocumentsRelatedTerms": { "Read": true, "Write": true },
+        "CodingRelatedTerms": { "Read": true, "Write": false },
+        "Publish": true,
+        "Reviewer": { "ID": "a84b3134-e456-4144-8539-ca113f577e1a", "Email": "myTestuser@hotmail.com" }
+    },
+        
+    { 
+        "ID":4, 
+        "Name": "Role B", 
+        "Overview": { "Read": false, "Write": false },
+        "ColumnDetails": { "Read": false, "Write": true },
+        "InstrumentationConditions": { "Read": true, "Write": true },
+        "AnalyteDetails": { "Read": false, "Write": false },
+        "SamplePrepMethod": { "Read": false, "Write": true },
+        "Chromatograms": { "Read": true, "Write": false },
+        "DocumentsRelatedTerms": { "Read": true, "Write": false },
+        "CodingRelatedTerms": { "Read": false, "Write": false },
+        "Publish": false,
+        "Reviewer": { "ID": "3c903930-7a36-47fd-8880-e7216a208fb3", "Email": "DarrylTest@hotmail.com"}
+    },
+    { 
+        "ID":6, 
+        "Name": "Role C", 
+        "Overview": { "Read": false, "Write": false },
+        "ColumnDetails": { "Read": false, "Write": true },
+        "InstrumentationConditions": { "Read": true, "Write": true },
+        "AnalyteDetails": { "Read": false, "Write": false },
+        "SamplePrepMethod": { "Read": true, "Write": false },
+        "Chromatograms": { "Read": true, "Write": false },
+        "DocumentsRelatedTerms": { "Read": true, "Write": true },
+        "CodingRelatedTerms": { "Read": false, "Write": false },
+        "Publish": false,
+        "Reviewer": { "ID": "b4bca324-a99c-4012-afdc-f2bcd881e5f4", "Email": "justint@phenomenex.com"}
+    },
+    { 
+        "ID":8, 
+        "Name": "Role D",
+        "Overview": { "Read": true, "Write": false },
+        "ColumnDetails": { "Read": false, "Write": false },
+        "InstrumentationConditions": { "Read": false, "Write": true },
+        "AnalyteDetails": { "Read": false, "Write": false },
+        "SamplePrepMethod": { "Read": false, "Write": true },
+        "Chromatograms": { "Read": true, "Write": false },
+        "DocumentsRelatedTerms": { "Read": true, "Write": true },
+        "CodingRelatedTerms": { "Read": true, "Write": false },
+        "Publish": false,
+        "Reviewer": {}
+    },
+    { 
+        "ID":10, 
+        "Name": "Role E",
+        "Overview": { "Read": true, "Write": false },
+        "ColumnDetails": { "Read": false, "Write": true },
+        "InstrumentationConditions": { "Read": true, "Write": true },
+        "AnalyteDetails": { "Read": false, "Write": false },
+        "SamplePrepMethod": { "Read": false, "Write": false },
+        "Chromatograms": { "Read": true, "Write": false },
+        "DocumentsRelatedTerms": { "Read": false, "Write": false },
+        "CodingRelatedTerms": { "Read": false, "Write": false },
+        "Publish": true,
+        "Reviewer":  { "ID": "29f63144-1545-4c0c-8e27-b164684818ca", "Email": "t@t.com"}
+    },
+    { 
+        "ID":12, 
+        "Name": "Role F", 
+        "Overview": { "Read": true, "Write": false },
+        "ColumnDetails": { "Read": false, "Write": false },
+        "InstrumentationConditions": { "Read": false, "Write": true },
+        "AnalyteDetails": { "Read": false, "Write": false },
+        "SamplePrepMethod": { "Read": true, "Write": false },
+        "Chromatograms": { "Read": true, "Write": false },
+        "DocumentsRelatedTerms": { "Read": false, "Write": false },
+        "CodingRelatedTerms": { "Read": false, "Write": false },
+        "Publish": false,
+        "Reviewer": {}
+    }
+]

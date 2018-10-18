@@ -1,0 +1,78 @@
+[
+  {
+    "Key": 1,
+    "Value": "Plasma/Serum"
+  },
+  {
+    "Key": 2,
+    "Value": "Whole Blood"
+  },
+  {
+    "Key": 3,
+    "Value": "Urine"
+  },
+  {
+    "Key": 4,
+    "Value": "Tissue Extract (Aqueous)"
+  },
+  {
+    "Key": 5,
+    "Value": "Tissue Extract (Organic Water Miscible)"
+  },
+  {
+    "Key": 6,
+    "Value": "Tissue Extract (Organic Water Immiscible)"
+  },
+  {
+    "Key": 7,
+    "Value": "Saliva"
+  },
+  {
+    "Key": 8,
+    "Value": "Meconium"
+  },
+  {
+    "Key": 9,
+    "Value": "Water (Particulate Free)"
+  },
+  {
+    "Key": 10,
+    "Value": "Water (Particulate Laden)"
+  },
+  {
+    "Key": 11,
+    "Value": "Oil/Grease/Cream"
+  },
+  {
+    "Key": 12,
+    "Value": "Soil (Post GPC Fraction or Post Soxhlet Clean-Up)"
+  },
+  {
+    "Key": 13,
+    "Value": "Soil (Aqueous)"
+  },
+  {
+    "Key": 14,
+    "Value": "Soil (Organic - Water Miscible)"
+  },
+  {
+    "Key": 15,
+    "Value": "Soil (Organic - Water Immiscible)"
+  },
+  {
+    "Key": 16,
+    "Value": "Horse Urine"
+  },
+  {
+    "Key": 17,
+    "Value": "Food/Plant Material (Aqueous)"
+  },
+  {
+    "Key": 18,
+    "Value": "Food/Plant Material (Organic - Water Miscible)"
+  },
+  {
+    "Key": 19,
+    "Value": "Food/Plant Material (Organic - Water Immiscible)"
+  }
+]

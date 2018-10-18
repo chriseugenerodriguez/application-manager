@@ -1,0 +1,897 @@
+[
+  {
+    "Key": 1,
+    "Value": "(Unknown)",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 2,
+    "Value": "1200 Series high performance autosampler, 0.1 100 µL",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 3,
+    "Value": "1200 Series micro well-plate autosampler",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 4,
+    "Value": "1200 Series standard autosampler, 0.1 100 µL",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 5,
+    "Value": "717 WISP 96-Position Tray",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 6,
+    "Value": "9100/9090/9095",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 7,
+    "Value": "Agilent Technologies 1090 HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 8,
+    "Value": "Agilent Technologies 1100 Series",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 9,
+    "Value": "Agilent Technologies 1200 Series",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 10,
+    "Value": "Agilent Technologies 1200 Series Binary LC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 11,
+    "Value": "Agilent Technologies 1200 Series Capillary LC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 12,
+    "Value": "Agilent Technologies 1200 Series GPC-SEC Analysis System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 13,
+    "Value": "Agilent Technologies 1200 Series Isocratic LC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 14,
+    "Value": "Agilent Technologies 1200 Series LC Micro Collection/Spotting System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 15,
+    "Value": "Agilent Technologies 1200 Series Nanoflow LC System for MS",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 16,
+    "Value": "Agilent Technologies 1200 Series Purification System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 17,
+    "Value": "Agilent Technologies 1200 Series Quaternary LC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 18,
+    "Value": "Agilent Technologies 1200 Series Rapid Resolution LC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 19,
+    "Value": "Agilent Technologies 1260 Infinity",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 20,
+    "Value": "Agilent Technologies 1260 Infinity Hybrid SFC/UHPLC",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 21,
+    "Value": "Agilent Technologies 1290 Infinity",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 22,
+    "Value": "Agilent Technologies LC/MS System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 23,
+    "Value": "Agilent Technologies Polaris",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 24,
+    "Value": "AI 3000 Series Autosampler",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 25,
+    "Value": "Alliance 2690",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 26,
+    "Value": "Applied Biosystems 130 PTH Analyzer",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 27,
+    "Value": "Applied Biosystems 2000, 3000, 4000, 5000,  Mass Analyzer:  QQQ, Interface(s): ES/APCI, PI",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 28,
+    "Value": "Applied Biosystems BIOiTRAQ QS,  Mass Analyzer:  Q-TOF, Interface(s): ES/ APCI, NS, PI, AP_MALDI",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 29,
+    "Value": "Applied Biosystems LC/MS Model: API 3000,  Mass Analyzer:  QQQ, Interface(s): ES/APCI, PI",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 30,
+    "Value": "Applied Biosystems LC/MS Model: API 4000,  Mass Analyzer:  QQQ, Interface(s): ES/APCI, PI",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 31,
+    "Value": "Applied Biosystems LC/MS Model: API 5000,  Mass Analyzer:  QQQ, Interface(s): ES/APCI, PI",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 32,
+    "Value": "Applied Biosystems LC/MS System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 33,
+    "Value": "Applied Biosystems Q TRAP,  Mass Analyzer:  QQQ-LT, Interface(s): ES/APCI, PI",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 34,
+    "Value": "Applied Biosystems Tempo ht LC",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 35,
+    "Value": "Beckman Coulter HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 36,
+    "Value": "Berger Instruments SFC, Mass Analyzer: Q, Interface(s): APCI",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 37,
+    "Value": "Biotage Prep LC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 38,
+    "Value": "Bruker Daltonics LC/MS System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 39,
+    "Value": "Cecil Instruments Adept HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 40,
+    "Value": "Cecil Instruments Adept HPLC System  2",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 41,
+    "Value": "Cecil Instruments Adept HPLC System 1",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 42,
+    "Value": "Cecil Instruments Adept HPLC System 10",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 43,
+    "Value": "Cecil Instruments Adept HPLC System 10S",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 44,
+    "Value": "Cecil Instruments Adept HPLC System 1S",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 45,
+    "Value": "Cecil Instruments Adept HPLC System 2S",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 46,
+    "Value": "Cecil Instruments Adept HPLC System 3",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 47,
+    "Value": "Cecil Instruments Adept HPLC System 3S",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 48,
+    "Value": "Cecil Instruments Adept HPLC System 4",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 49,
+    "Value": "Cecil Instruments Adept HPLC System 4S",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 50,
+    "Value": "Cecil Instruments Adept HPLC System 5",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 51,
+    "Value": "Cecil Instruments Adept HPLC System 5S",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 52,
+    "Value": "Cecil Instruments Adept HPLC System 6",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 53,
+    "Value": "Cecil Instruments Adept HPLC System 6S",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 54,
+    "Value": "Cecil Instruments Adept HPLC System 7",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 55,
+    "Value": "Cecil Instruments Adept HPLC System 8",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 56,
+    "Value": "Cecil Instruments Adept HPLC System 9",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 57,
+    "Value": "Cecil Instruments Q-Adept",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 58,
+    "Value": "Dionex HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 59,
+    "Value": "Dionex Summit HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 60,
+    "Value": "Dionex UltiMate 3000",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 61,
+    "Value": "Dionex Ultimate 3000 RSLC",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 62,
+    "Value": "Eksigent Express LC-Ultra",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 63,
+    "Value": "Eksigent Technologies 8-Channel HPLC",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 64,
+    "Value": "Eksigent Technologies Express LC-100",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 65,
+    "Value": "Eksigent Technologies HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 66,
+    "Value": "EMD 1000,  Mass Analyzer: Q, Interface(s): ES, APCI",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 67,
+    "Value": "GE Healthcare AKTA LC systems - ÄKTAexplorer™",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 68,
+    "Value": "GE Healthcare AKTA LC systems - ÄKTAmicro™",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 69,
+    "Value": "GE Healthcare AKTA LC systems - ÄKTApilot™",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 70,
+    "Value": "GE Healthcare AKTA LC systems - ÄKTAprime™ plus",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 71,
+    "Value": "GE Healthcare AKTA LC systems - ÄKTAprocess™",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 72,
+    "Value": "GE Healthcare AKTA LC systems - ÄKTApurifier™",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 73,
+    "Value": "GE Healthcare AKTA LC systems - ÄKTA™ avant",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 74,
+    "Value": "GE Healthcare AKTA LC systems - ÄKTA™ready",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 75,
+    "Value": "GE Healthcare AKTA LC systems - ÄKTAxpress™",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 76,
+    "Value": "Gilson 235 Analysis System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 77,
+    "Value": "Gilson 845ZPREP System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 78,
+    "Value": "Gilson cLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 79,
+    "Value": "Gilson Fraction Trapping Liquid Chromatography (FTLC) System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 80,
+    "Value": "Gilson GX-271 Anspec",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 81,
+    "Value": "Gilson GX-271 GPC",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 82,
+    "Value": "Gilson HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 83,
+    "Value": "Gilson Multiple Probe 215 System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 84,
+    "Value": "Gilson PLC 2020 Personal Purification System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 85,
+    "Value": "Gilson Prep LC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 86,
+    "Value": "Grace HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 87,
+    "Value": "Grace LC/MS System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 88,
+    "Value": "Hitachi HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 89,
+    "Value": "Hitachi LaChrom Elite HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 90,
+    "Value": "Hitachi LaChrom Uitra U-HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 91,
+    "Value": "Hitachi LC/MS System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 92,
+    "Value": "Hitachi Prep LC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 93,
+    "Value": "HPLC-Autosampler LS-3200",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 94,
+    "Value": "JASCO HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 95,
+    "Value": "JASCO LC/MS System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 96,
+    "Value": "JASCO LC-2000",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 97,
+    "Value": "JASCO Prep LC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 98,
+    "Value": "JASCO SFC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 99,
+    "Value": "JASCO X-LC",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 100,
+    "Value": "Knauer HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 101,
+    "Value": "Knauer PLATINblue",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 102,
+    "Value": "Knauer Prep LC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 103,
+    "Value": "Knauer Smartline",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 104,
+    "Value": "Kontron HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 105,
+    "Value": "Kronlab HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 106,
+    "Value": "LabAlliance HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 107,
+    "Value": "LabAlliance Prep LC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 108,
+    "Value": "LCT Series,  Mass Analyzer: TOF, Interface(s): ES, APCI, ES/APCI",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 109,
+    "Value": "Nanostream HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 110,
+    "Value": "Nanostream LC/MS System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 111,
+    "Value": "Nanostream LD System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 112,
+    "Value": "PDR Chiral Detector",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 113,
+    "Value": "PDR-Chiral Advanced Laser Polarimeter (ALP)",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 114,
+    "Value": "Perkin Elmer Flexar FX-15 UHPLC",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 115,
+    "Value": "Perkin Elmer Flexar SQ 300 MS",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 116,
+    "Value": "Perkin Elmer HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 117,
+    "Value": "Perkin Elmer LC 600 (60)",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 118,
+    "Value": "Perkin Elmer LC/MS System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 119,
+    "Value": "Phenomenex ThermaSphere TS-130 Column Heater 25° - 90°C. PN: EH0-7057",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 120,
+    "Value": "Phenomenex ThermaSphere TS-430 Column Heater-Chiller  8° - 70°C. PN: EH0-5720",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 121,
+    "Value": "Prospekt",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 122,
+    "Value": "Q-Tof Series,  Mass Analyzer: Q-TOF, Interface(s): ES, APCI, ES/APCI, PI",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 123,
+    "Value": "Quatro Series,  Mass Analyzer: QQQ, Interface(s): ES, APCI, ES/APCI, PI",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 124,
+    "Value": "Richard Scientific HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 125,
+    "Value": "Richard Scientific Kromaton FCPC",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 126,
+    "Value": "Shimadzu HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 127,
+    "Value": "Shimadzu LC/MS System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 128,
+    "Value": "Shimadzu LC-10 Avp Series",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 129,
+    "Value": "Shimadzu LC-2010",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 130,
+    "Value": "Shimadzu LC-20A Prominence",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 131,
+    "Value": "Shimadzu LCMS-2010EV Evolution",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 132,
+    "Value": "Shimadzu LCMS-IT-TOF,  Mass Analyzer:  IT-TOF, Interface(s): ES",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 133,
+    "Value": "Shimadzu Nexera UHPLC",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 134,
+    "Value": "Shimadzu Prominence UFLC",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 135,
+    "Value": "Shimadzu SIL-6B, -7A,-8A,-9A, -10A",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 136,
+    "Value": "Shimadzu UFLC-XR",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 137,
+    "Value": "Spectra Physics HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 138,
+    "Value": "Thar Technologies Analytical Method Station X5 SFC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 139,
+    "Value": "Thar Technologies Analytical Resolution SFC MS System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 140,
+    "Value": "Thar Technologies Method Station SFC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 141,
+    "Value": "Thar Technologies SFC PetroAnalyzer",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 142,
+    "Value": "Thar Technologies SFC Prep 200",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 143,
+    "Value": "Thar Technologies SFC Prep 350",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 144,
+    "Value": "Thar Technologies SFC Prep 80",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 145,
+    "Value": "Thar Technologies SFC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 146,
+    "Value": "Thar Technologies SFC-MS Prep 100",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 147,
+    "Value": "Thar Technologies The Investigator SFC",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 148,
+    "Value": "Thermo Fisher Accela High Speed HPLC",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 149,
+    "Value": "Thermo Fisher Accela High Speed HPLC / UPLC",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 150,
+    "Value": "Thermo Fisher Aria TLX HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 151,
+    "Value": "Thermo Fisher Chromatography AS 3000 Series Autosampler",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 152,
+    "Value": "Thermo Fisher HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 153,
+    "Value": "Thermo Fisher LC/MS System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 154,
+    "Value": "Thermo Fisher Surveyor Plus HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 155,
+    "Value": "Transgenomic HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 156,
+    "Value": "TSQ Quantum Accss,  Mass Analyzer:  QQQ, Interface(s): ES, IS, APCI",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 157,
+    "Value": "TSQ Quantum Series,  Mass Analyzer:  QQQ, Interface(s): ES, IS, APCI",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 158,
+    "Value": "Unknown",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 159,
+    "Value": "Varian 920-LC",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 160,
+    "Value": "Varian HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 161,
+    "Value": "Varian LC/MS System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 162,
+    "Value": "Varian Prep LC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 163,
+    "Value": "Viscotek HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 164,
+    "Value": "Waters Acquity UPC2",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 165,
+    "Value": "Waters ACQUITY UPLC H-Class",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 166,
+    "Value": "Waters ACQUITY UPLC I-Class",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 167,
+    "Value": "Waters ACQUITY UPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 168,
+    "Value": "Waters Alliance 2695",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 169,
+    "Value": "Waters Alliance Series",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 170,
+    "Value": "Waters Breeze 2 HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 171,
+    "Value": "Waters DeltaPrep 150 mL System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 172,
+    "Value": "Waters DeltaPrep 300 mL System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 173,
+    "Value": "Waters HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 174,
+    "Value": "Waters LC/MS System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 175,
+    "Value": "Waters nanoACQUITY UPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 176,
+    "Value": "Waters Prep LC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 177,
+    "Value": "Waters SuperDiscovery FC",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 178,
+    "Value": "Zirchrom HPLC System",
+    "ApplicationTypeKey": 1
+  },
+  {
+    "Key": 179,
+    "Value": "ZQ,  Mass Analyzer: Q, Interface(s): ES, APCI, ES/APCI, PI",
+    "ApplicationTypeKey": 1
+  }
+]
