@@ -14,13 +14,13 @@ export class AuthenticationService {
 	accessToken: string;
 	userAgentApplication: UserAgentApplication = null;
 
-	public url = environment.production ? 'https://appmngerdev.azurewebsites.net' : 'http://localhost:4200';
+	public url = environment.production ? '' : 'http://localhost:4200';
 
 	private applicationConfig: any = {
-		clientID: '1ea86d94-ccc0-414f-88e2-7508276ea288',
-		authority: 'https://login.microsoftonline.com/tfp/phenomenexb2c.onmicrosoft.com/B2C_1_PhxSignUpSignIn',
-		b2cScopes: ['https://PhenomenexB2C.onmicrosoft.com/user_impersonation'],
-		passwordReset: 'https://login.microsoftonline.com/tfp/phenomenexb2c.onmicrosoft.com/B2C_1_PhxPwdPolicy',
+		clientID: '',
+		authority: '',
+		b2cScopes: [''],
+		passwordReset: '',
 		hostname: this.url
 	};
 
