@@ -13,7 +13,7 @@ import { AuthenticationService } from '../services/auth.service';
 export class API {
 	headers = new Headers;
 	options = new RequestOptions;
-	apibase = 'https://phx-appmanager-api-dev.azurewebsites.net/phenomenex/appManager/1.0.0/';
+	apibase = '';
 
 	constructor(private http: Http, private AS: AuthenticationService) {
 		this.headers = new Headers({'content-type': 'application/json', 'Authorization': 'Bearer ' + this.AS.getToken()});
